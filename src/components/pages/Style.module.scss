@@ -26,10 +26,8 @@
 
 			.left {
 				overflow: hidden;
-				margin-bottom: 70px;
 				display: flex;
 				flex-direction: column;
-				//width: 100%;
 
 				@media (max-width: 1150px) {
 					margin-bottom: 25px;
