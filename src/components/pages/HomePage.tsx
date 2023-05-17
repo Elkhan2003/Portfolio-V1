@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import scss from "@/components/pages/Style.module.scss";
 import SpringText from "@/components/spring-text/SpringText";
 import { GithubIcon, LinkedinIcon } from "@/components/svgs";
+import Image from "next/image";
 import html_icon from "@/assets/tech-icons/html-icon.png";
 import css_icon from "@/assets/tech-icons/css-icon.png";
 import java_script_icon from "@/assets/tech-icons/java-script-icon.png";
@@ -12,7 +13,6 @@ import vite_icon from "@/assets/tech-icons/vite-icon.png";
 import next_icon from "@/assets/tech-icons/next-js-icon.png";
 import node_icon from "@/assets/tech-icons/node-js-icon.png";
 import scss_icon from "@/assets/tech-icons/scss-icon.png";
-import Image from "next/image";
 
 const HomePage: FC = () => {
 	const tech_icons = [
