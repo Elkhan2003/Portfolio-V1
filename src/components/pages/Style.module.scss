@@ -1,0 +1,220 @@
+.home__page {
+	padding: 170px 0;
+
+	@media (max-width: 1150px) {
+		padding: 100px 0;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.text__z__index {
+			position: relative;
+			z-index: 2;
+		}
+
+		.top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@media (max-width: 1150px) {
+				flex-direction: column-reverse;
+			}
+
+			.left {
+				overflow: hidden;
+				margin-bottom: 70px;
+				display: flex;
+				flex-direction: column;
+				//width: 100%;
+
+				@media (max-width: 1150px) {
+					margin-bottom: 25px;
+				}
+
+				.my__name {
+					font-size: 50px;
+					font-weight: 800;
+
+					@media (max-width: 740px) {
+						font-size: 40px;
+					}
+					@media (max-width: 500px) {
+						font-size: 30px;
+					}
+					@media (max-width: 400px) {
+						font-size: 27px;
+					}
+
+					span {
+						opacity: 0.6;
+					}
+				}
+
+				.my__experience {
+					margin-bottom: 25px;
+					display: flex;
+					align-items: center;
+					font-size: 43px;
+					font-weight: 700;
+
+					@media (max-width: 740px) {
+						font-size: 33px;
+					}
+					@media (max-width: 500px) {
+						font-size: 23px;
+					}
+					@media (max-width: 400px) {
+						font-size: 21px;
+					}
+
+					span {
+						//color: #b509bd !important;
+						background: -webkit-linear-gradient(
+							-70deg,
+							#b509bd 0%,
+							#7a06b4 100%
+						);
+						-webkit-background-clip: text;
+						background-clip: text;
+						-webkit-text-fill-color: rgba(0, 0, 0, 0);
+						-webkit-box-decoration-break: clone;
+					}
+				}
+
+				.my__self {
+					margin-bottom: 25px;
+					max-width: 700px;
+				}
+
+				.my__icons {
+					gap: 10px;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+
+					.icon {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						svg {
+							font-size: 35px;
+							color: var(--footer-icon-dark);
+
+							transition: 0.3s;
+
+							&:hover {
+								color: #b509bd;
+							}
+						}
+					}
+				}
+			}
+
+			.right {
+				@media (max-width: 1150px) {
+					margin-bottom: 25px;
+				}
+
+				.shape {
+					background: url("../../assets/man.png") no-repeat center/cover;
+					animation: morph 8s ease-in-out infinite;
+					border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+					border: 3px solid rgba(181, 9, 189, 0.5);
+					box-shadow: 0 0 10px rgba(181, 9, 189, 0.3);
+					transition: all 1s ease-in-out;
+					width: 400px;
+					height: 400px;
+
+					@media (max-width: 500px) {
+						width: 300px;
+						height: 300px;
+					}
+					@media (max-width: 400px) {
+						width: 250px;
+						height: 250px;
+					}
+				}
+
+				@keyframes morph {
+					0% {
+						border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+					}
+
+					50% {
+						border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+					}
+
+					100% {
+						border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+					}
+				}
+			}
+		}
+
+		// ! bottom
+		.bottom {
+			width: 100%;
+
+			.my__skills {
+				display: flex;
+				align-items: center;
+
+				@media (max-width: 1150px) {
+					flex-direction: column;
+				}
+
+				p {
+					font-weight: 600;
+					border-right: 2px solid #b509bd;
+					margin-right: 3rem;
+					padding-right: 1rem;
+
+					@media (max-width: 1150px) {
+						border-bottom: 2px solid #b509bd;
+						border-right: none;
+						margin-bottom: 1.5rem;
+						margin-right: 0;
+						padding-bottom: 1rem;
+						padding-right: 0;
+					}
+				}
+
+				.logos {
+					margin: 5px;
+					gap: 15px;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+
+					@media (max-width: 850px) {
+						justify-content: center;
+					}
+
+					.icon {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: rgba(154, 0, 215, 0.25);
+						border-radius: 50%;
+						box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+						cursor: pointer;
+
+						img {
+							margin: 15px;
+							width: 35px;
+							height: auto;
+							background: transparent;
+							border-radius: 0;
+							box-shadow: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

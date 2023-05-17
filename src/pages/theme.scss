@@ -1,0 +1,47 @@
+:root {
+	// ! wrapper
+	--wrapper-bg: #1e1e20;
+
+	// ! header
+	--header-scroll-box-shadow: #3f3f3f;
+	--header-scroll: #0c131b00;
+	--header-scroll-active: rgba(30, 30, 32, 0.4);
+	--header-scroll-text-color: #fff;
+	--header-scroll-text-color-active: #ffe6a9;
+	--header-scroll-text-color-hover: #bdbdbd;
+	--header-text-color: #fff;
+	--header-text-color-active: #ffe6a9;
+	--header-text-color-hover: #bdbdbd;
+	--header-burger-button: #fff;
+	--header-burger-menu: #1e1e20;
+	--header-burger-menu-border: rgba(255, 255, 255, 0.151);
+	--header-burger-menu-button-line: #ffffff21;
+	--header-burger-menu-switch-theme-button: #252529;
+	--header-burger-menu-switch-theme-text: #9c9ca3;
+	--header-dropdown-lang-icon-hover: #bdbdbd;
+	--header-dropdown-lang-bg: #252529;
+	--header-dropdown-lang-button-hover: #c1ad7b;
+	--header-timetable: #ffe6a9;
+
+	//	! main
+	--home-border-radius-dentist: #ffe6a9;
+	--about-bg: #1e1e1e;
+	--about-title-color: #ffffff;
+	--about-text-color: rgba(255, 230, 169, 0.7);
+	--about2-bg: #1e1e1e;
+	--contact-bg: #262626;
+	--contact-text-color: #ffffff;
+	--contact-icon: #ffe6a9;
+	--contact-form-input-bg: #ffffff;
+	--contact-form-input-placeholder: #999999;
+
+	// ! footer
+	--footer-bg-dark: #1b1d23;
+	--footer-title-dark: #ffe6a9;
+	--footer-text-dark: #aaaaaa;
+	--footer-textHover-dark: #fff;
+	--footer-icon-dark: #ffffff;
+	--footer-icon-bg-dark: #13131380;
+	--footer-iconHover-bg-dark: #796a46;
+	--footer-hr-dark: #a5a5a6;
+}
