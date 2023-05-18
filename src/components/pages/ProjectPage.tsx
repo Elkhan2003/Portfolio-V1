@@ -88,7 +88,6 @@ const ProjectPage: FC = () => {
 							</div>
 							<div className={`${scss.text__z__index} ${scss.pro__img}`}>
 								<a href="#" target="_blank">
-									2
 									<Image src={project_1} alt={"project"} />
 								</a>
 							</div>

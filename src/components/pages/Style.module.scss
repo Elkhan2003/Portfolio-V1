@@ -392,6 +392,10 @@
 				flex-direction: column-reverse;
 			}
 
+			@media (max-width: 500px) {
+				padding: 0;
+			}
+
 			background: rgba(26, 15, 33, 0.3);
 			border-radius: 25px;
 			border: 1px solid rgba(181, 9, 189, 0.5);
@@ -403,6 +407,10 @@
 				margin: 0 50px;
 				width: 100%;
 				text-align: center;
+
+				@media (max-width: 500px) {
+					padding: 20px 7px;
+				}
 
 				h3 {
 					margin-bottom: 25px;
