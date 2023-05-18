@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { FC } from "react";
 import scss from "@/components/pages/Style.module.scss";
 import SpringText from "@/components/spring-text/SpringText";
@@ -13,6 +12,7 @@ import vite_icon from "@/assets/tech-icons/vite-icon.png";
 import next_icon from "@/assets/tech-icons/next-js-icon.png";
 import node_icon from "@/assets/tech-icons/node-js-icon.png";
 import scss_icon from "@/assets/tech-icons/scss-icon.png";
+import { FormattedMessage } from "react-intl";
 
 const HomePage: FC = () => {
 	const tech_icons = [
@@ -47,26 +47,24 @@ const HomePage: FC = () => {
 
 	return (
 		<>
-			<Head>
-				<title>Elcho911</title>
-			</Head>
 			<div id="/" className={scss.home__page}>
 				<div className="container">
 					<div className={scss.content}>
 						<div className={scss.top}>
 							<div className={scss.left}>
 								<h1 className={`${scss.text__z__index} ${scss.my__name}`}>
-									Hi, I'm Elkhan <span>(Elcho)</span>
+									<FormattedMessage
+										id="page.home.my_name"
+										values={{ span: (chunks) => <span>{chunks}</span> }}
+									/>
 								</h1>
 								<h1 className={`${scss.text__z__index} ${scss.my__experience}`}>
-									I AM A&nbsp;
+									<FormattedMessage id="page.home.my__experience" />
+									&nbsp;
 									<SpringText />
 								</h1>
 								<p className={`${scss.text__z__index} ${scss.my__self}`}>
-									As a skilled full-stack developer, I am dedicated to turning
-									ideas into innovative web applications. Explore my latest
-									projects and articles, showcasing my expertise in React.js and
-									web development. 📍
+									<FormattedMessage id="page.home.my__self" />
 								</p>
 								<div className={`${scss.text__z__index} ${scss.my__icons}`}>
 									<a
@@ -95,7 +93,9 @@ const HomePage: FC = () => {
 						{/*	! bottom */}
 						<div className={scss.bottom}>
 							<div className={`${scss.my__skills}`}>
-								<p className={`${scss.text__z__index}`}>Tech Stack</p>
+								<p className={`${scss.text__z__index}`}>
+									<FormattedMessage id="page.home.tech_stack" />
+								</p>
 								<div className={scss.logos}>
 									{tech_icons.map((item, index) => (
 										<div
