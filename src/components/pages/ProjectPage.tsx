@@ -10,6 +10,7 @@ interface projectsTypes {
 	stack: Array<string>;
 	codeLink: string;
 	demoLink: string;
+	image: any;
 }
 
 const ProjectPage: FC = () => {
@@ -20,7 +21,8 @@ const ProjectPage: FC = () => {
 				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
 			stack: ["React", "SCSS"],
 			codeLink: "#",
-			demoLink: "#"
+			demoLink: "#",
+			image: project_1
 		},
 		{
 			title: "COINDOM 🪙",
@@ -28,7 +30,8 @@ const ProjectPage: FC = () => {
 				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
 			stack: ["React", "SCSS"],
 			codeLink: "#",
-			demoLink: "#"
+			demoLink: "#",
+			image: project_1
 		},
 		{
 			title: "COINDOM 🪙",
@@ -36,7 +39,8 @@ const ProjectPage: FC = () => {
 				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
 			stack: ["React", "SCSS"],
 			codeLink: "#",
-			demoLink: "#"
+			demoLink: "#",
+			image: project_1
 		}
 	];
 
@@ -91,12 +95,12 @@ const ProjectPage: FC = () => {
 									</div>
 								</div>
 								<div className={`${scss.text__z__index} ${scss.pro__img}`}>
-									<a href="#" target="_blank">
+									<a href={project.demoLink} target="_blank">
 										<Image
 											priority={true}
 											quality={25}
 											loading="eager"
-											src={project_1}
+											src={project.image}
 											alt={"project"}
 										/>
 									</a>
