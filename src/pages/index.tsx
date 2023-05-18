@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Layout from "@/components/layout/Layout";
 import HomePage from "@/components/pages/HomePage";
 import AboutPage from "@/components/pages/AboutPage";
+import ProjectPage from "@/components/pages/ProjectPage";
 
 const Index: FC = () => {
 	return (
@@ -9,6 +10,7 @@ const Index: FC = () => {
 			<Layout>
 				<HomePage />
 				<AboutPage />
+				<ProjectPage />
 			</Layout>
 		</>
 	);
