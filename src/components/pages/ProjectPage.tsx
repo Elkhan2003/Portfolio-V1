@@ -50,7 +50,13 @@ const ProjectPage: FC = () => {
 							</div>
 							<div className={`${scss.text__z__index} ${scss.pro__img}`}>
 								<a href="#" target="_blank">
-									<Image src={project_1} alt={"project"} />
+									<Image
+										priority={true}
+										quality={25}
+										loading="eager"
+										src={project_1}
+										alt={"project"}
+									/>
 								</a>
 							</div>
 						</div>
@@ -88,7 +94,13 @@ const ProjectPage: FC = () => {
 							</div>
 							<div className={`${scss.text__z__index} ${scss.pro__img}`}>
 								<a href="#" target="_blank">
-									<Image src={project_1} alt={"project"} />
+									<Image
+										priority={true}
+										quality={25}
+										loading="eager"
+										src={project_1}
+										alt={"project"}
+									/>
 								</a>
 							</div>
 						</div>
@@ -126,7 +138,13 @@ const ProjectPage: FC = () => {
 							</div>
 							<div className={`${scss.text__z__index} ${scss.pro__img}`}>
 								<a href="#" target="_blank">
-									<Image src={project_1} alt={"project"} />
+									<Image
+										priority={true}
+										quality={25}
+										loading="eager"
+										src={project_1}
+										alt={"project"}
+									/>
 								</a>
 							</div>
 						</div>

@@ -66,8 +66,8 @@ const Header: FC<HeaderProps> = (props) => {
 			duration: durationScroll
 		},
 		{
-			label: <FormattedMessage id="page.header.feedback" />,
-			to: "feedback",
+			label: <FormattedMessage id="page.header.project" />,
+			to: "project",
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
