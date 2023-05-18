@@ -41,6 +41,15 @@ const ProjectPage: FC = () => {
 			codeLink: "#",
 			demoLink: "#",
 			image: project_1
+		},
+		{
+			title: "COINDOM 🪙",
+			description:
+				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
+			stack: ["React", "SCSS"],
+			codeLink: "#",
+			demoLink: "#",
+			image: project_1
 		}
 	];
 
@@ -59,7 +68,7 @@ const ProjectPage: FC = () => {
 						{projects.map((project, index) => (
 							<div
 								className={`${scss.card} ${
-									index === 1 ? scss.row__reverse : ""
+									index % 2 !== 0 ? scss.row__reverse : ""
 								}`}
 								key={index + 1}
 							>
