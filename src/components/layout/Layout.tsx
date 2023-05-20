@@ -4,7 +4,7 @@ import scss from "./Layout.module.scss";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 import { useIntl } from "react-intl";
-import useScript from "@/components/layout/useScript";
+import useScript_V2 from "@/components/layout/useScript_V2";
 
 import { Montserrat } from "next/font/google";
 
@@ -26,7 +26,7 @@ export interface IsOpenProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
-	useScript(url);
+	useScript_V2(url);
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false);
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] =

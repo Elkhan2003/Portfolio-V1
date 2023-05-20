@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useScript = (url: string): void => {
+const useScript_V1 = (url: string): void => {
 	useEffect(() => {
 		const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 		const ctx = canvas.getContext("2d")!;
@@ -95,4 +95,4 @@ const useScript = (url: string): void => {
 		animate();
 	}, [url]);
 };
-export default useScript;
+export default useScript_V1;
