@@ -518,3 +518,29 @@
 		}
 	}
 }
+
+// ! contact__page
+.contact__page {
+	padding: 60px 0 100px 0;
+
+	.content {
+		.title {
+			h4 {
+				background: -webkit-linear-gradient(-70deg, #b509bd 0%, #7a06b4 100%);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: rgba(0, 0, 0, 0);
+				-webkit-box-decoration-break: clone;
+
+				font-size: 27px;
+				font-weight: 800;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+
+				@media (max-width: 500px) {
+					font-size: 21px;
+				}
+			}
+		}
+	}
+}

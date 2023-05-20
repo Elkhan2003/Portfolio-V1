@@ -1,11 +1,8 @@
 .contact_page {
-  margin-top: 9rem;
-
   .form_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
-    margin: 2rem;
+    grid-gap: 0px 60px;
 
     .box_img,
     .box_img_send {
