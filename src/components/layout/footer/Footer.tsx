@@ -13,7 +13,7 @@ const Footer: FC = () => {
 							Built with<span className={scss.heart}>♡</span>by
 							<span>
 								<a href="https://nextjs.org/" target="_blank">
-									NextJS
+									NextTS
 								</a>
 							</span>
 						</h4>
