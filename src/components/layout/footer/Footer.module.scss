@@ -1,0 +1,59 @@
+.text__z__index {
+	position: relative;
+	z-index: 2;
+}
+
+.footer__page {
+	padding: 23px 0;
+	background: rgba(26, 15, 33, 0.7);
+
+	@media (max-width: 500px) {
+		padding: 15px 0;
+	}
+
+	.content {
+		gap: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 500px) {
+			text-align: center;
+			flex-direction: column-reverse;
+			justify-content: center;
+		}
+
+		h4 {
+			font-weight: 600;
+
+			@media (max-width: 500px) {
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+
+		.my__icons {
+			gap: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			.icon {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				svg {
+					font-size: 28px;
+					color: var(--footer-icon-dark);
+
+					transition: 0.3s;
+
+					&:hover {
+						color: #b509bd;
+					}
+				}
+			}
+		}
+	}
+}
