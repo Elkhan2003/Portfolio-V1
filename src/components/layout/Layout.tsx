@@ -54,10 +54,10 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<title>{title}</title>
 				<meta name="description" content={description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
-				<link rel="icon" href="/favicon.ico" hrefLang="x-default" />
-				<link rel="icon" href="/favicon.ico" hrefLang="en" />
-				<link rel="icon" href="/favicon.ico" hrefLang="ru" />
+				<link rel="icon" href="/heart.png" />
+				<link rel="icon" href="/heart.png" hrefLang="x-default" />
+				<link rel="icon" href="/heart.png" hrefLang="en" />
+				<link rel="icon" href="/heart.png" hrefLang="ru" />
 			</Head>
 			<div dir={dir}>
 				<canvas className={scss.canvas} id="canvas" />
