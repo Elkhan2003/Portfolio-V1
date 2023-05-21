@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import scss from "./Style.module.scss";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -18,6 +18,8 @@ interface FormData {
 }
 
 const ContactPage: FC = () => {
+	const [sendButton, setSendButton] = useState(false);
+
 	const {
 		register,
 		handleSubmit,
@@ -41,6 +43,8 @@ const ContactPage: FC = () => {
 	};
 
 	const sendData = async (data: FormData) => {
+		setSendButton(!sendButton);
+
 		try {
 			await axios.post(API_URL, {
 				chat_id: CHAT_ID,
@@ -48,6 +52,7 @@ const ContactPage: FC = () => {
 				text: messageModel(data)
 			});
 
+			setSendButton(sendButton);
 			notify();
 			reset();
 		} catch (err) {
@@ -100,7 +105,7 @@ const ContactPage: FC = () => {
 									<label htmlFor="name" className={scss.form__label}>
 										<FormattedMessage id="page.contact.input.name" />
 									</label>
-									{errors.name && <p>Пожалуйста, введите ваше имя.</p>}
+									{errors.name && <p className={scss.error}>Пожалуйста, введите ваше имя.</p>}
 								</div>
 
 								<div className={scss.form__group}>
@@ -119,7 +124,7 @@ const ContactPage: FC = () => {
 										<FormattedMessage id="page.contact.input.email" />
 									</label>
 									{errors.email && (
-										<p>
+										<p className={scss.error}>
 											Пожалуйста, введите корректный адрес электронной почты.
 										</p>
 									)}
@@ -138,7 +143,7 @@ const ContactPage: FC = () => {
 										<FormattedMessage id="page.contact.input.subject" />
 									</label>
 									{errors.subject && (
-										<p>
+										<p className={scss.error}>
 											Пожалуйста, введите тему сообщения (минимум 2 символа).
 										</p>
 									)}
@@ -156,8 +161,17 @@ const ContactPage: FC = () => {
 										<FormattedMessage id="page.contact.input.message" />
 									</label>
 								</div>
-								<button type="submit">
-									<FormattedMessage id="page.contact.send" />
+								<button
+									type="submit"
+									className={`${scss.button} ${
+										sendButton ? scss.loading : null
+									}`}
+								>
+									{sendButton ? (
+										<FormattedMessage id="page.contact.sending" />
+									) : (
+										<FormattedMessage id="page.contact.send" />
+									)}
 								</button>
 							</form>
 						</div>
