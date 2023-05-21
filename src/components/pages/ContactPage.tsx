@@ -95,7 +95,7 @@ const ContactPage: FC<ContactPageType> = ({ className }) => {
 								<FormattedMessage id="page.contact.title" />
 							</h4>
 						</div>
-						<form className={scss.form} onSubmit={sendData}>
+						<form onSubmit={sendData}>
 							<div>
 								<div>
 									<div>
