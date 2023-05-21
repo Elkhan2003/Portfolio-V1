@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { FormattedMessage } from "react-intl";
 import scss from "./Header.module.scss";
-import { LangIcon, ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
+import { LangIcon, ArrowIcon } from "@/components/svgs";
 import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
 
 // PermanentMarker
@@ -29,7 +29,7 @@ const Header: FC<HeaderProps> = (props) => {
 	// ! Scrolling Scroll
 	useEffect(() => {
 		const changeBackground = () => {
-			if (typeof window !== "undefined" && window.scrollY >= 10) {
+			if (window.scrollY >= 10) {
 				setHeaderScroll(true);
 			} else {
 				setHeaderScroll(false);

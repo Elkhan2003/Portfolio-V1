@@ -55,6 +55,10 @@ const ContactPage: FC = () => {
 		}
 	};
 
+	const testButton = () => {
+		notify();
+	};
+
 	const notify = () => {
 		toast.success("Ваша форма успешно отправлена!", {
 			position: "top-right",
@@ -88,7 +92,7 @@ const ContactPage: FC = () => {
 										placeholder={intl.formatMessage({
 											id: "page.contact.input.name"
 										})}
-										{...register("name", { required: true })}
+										{...register("name", { required: true, minLength: 2 })}
 									/>
 									{errors.name && <p>Пожалуйста, введите ваше имя.</p>}
 								</div>
@@ -137,11 +141,12 @@ const ContactPage: FC = () => {
 								</div>
 							</div>
 							<button type="submit">send</button>
-							<ToastContainer />
 						</form>
+						<button onClick={testButton}>testButton</button>
 					</div>
 				</div>
 			</div>
+			<ToastContainer />
 		</>
 	);
 };
