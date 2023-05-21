@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { Montserrat } from "next/font/google";
-import { useForm } from "react-hook-form";
 
 const font = Montserrat({ subsets: ["latin"] });
 
