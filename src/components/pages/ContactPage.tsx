@@ -97,14 +97,6 @@ const ContactPage: FC<ContactPageType> = ({ className }) => {
 						<form className={scss.form} onSubmit={sendData}>
 							<div>
 								<div>
-									<h2>
-										<FormattedMessage id="page.contact.left.title" />
-									</h2>
-									<p>
-										<FormattedMessage id="page.contact.left.text" />
-									</p>
-								</div>
-								<div>
 									<div>
 										<input
 											type="text"
@@ -115,7 +107,7 @@ const ContactPage: FC<ContactPageType> = ({ className }) => {
 											required
 										/>
 										<label htmlFor="name">
-											<FormattedMessage id="page.contact.input.fitst.name" />
+											<FormattedMessage id="page.contact.input.name" />
 										</label>
 									</div>
 
