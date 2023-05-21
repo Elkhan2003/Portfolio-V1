@@ -55,14 +55,15 @@ const ProjectPage: FC = () => {
 
 	return (
 		<>
-			<div id="project" className={scss.project__page}>
+			<div
+				id="project"
+				className={`${scss.text__z__index} ${scss.project__page}`}
+			>
 				<div className="container">
 					<div className={scss.content}>
 						<div className={scss.title}>
-							<h4 className={`${scss.text__z__index}`}>Projects</h4>
-							<h3 className={`${scss.text__z__index}`}>
-								Each project is a unique piece of development 🧩
-							</h3>
+							<h4>Projects</h4>
+							<h3>Each project is a unique piece of development 🧩</h3>
 						</div>
 
 						{projects.map((project, index) => (
@@ -73,20 +74,16 @@ const ProjectPage: FC = () => {
 								key={index + 1}
 							>
 								<div className={scss.pro__text}>
-									<h3 className={`${scss.text__z__index}`}>{project.title}</h3>
-									<p className={`${scss.text__z__index}`}>
-										{project.description}
-									</p>
+									<h3>{project.title}</h3>
+									<p>{project.description}</p>
 									<div className={scss.stack}>
 										{project.stack.map((item, index) => (
-											<p className={`${scss.text__z__index}`} key={index + 1}>
-												{item}
-											</p>
+											<p key={index + 1}>{item}</p>
 										))}
 									</div>
 									<div className={scss.links}>
 										<a
-											className={`${scss.text__z__index} ${scss.code}`}
+											className={`${scss.code}`}
 											href={project.codeLink}
 											target="_blank"
 										>
@@ -94,7 +91,7 @@ const ProjectPage: FC = () => {
 											<GithubIcon />
 										</a>
 										<a
-											className={`${scss.text__z__index} ${scss.demo}`}
+											className={`${scss.demo}`}
 											href={project.demoLink}
 											target="_blank"
 										>
@@ -103,7 +100,7 @@ const ProjectPage: FC = () => {
 										</a>
 									</div>
 								</div>
-								<div className={`${scss.text__z__index} ${scss.pro__img}`}>
+								<div className={`${scss.pro__img}`}>
 									<a href={project.demoLink} target="_blank">
 										<Image
 											priority={true}
