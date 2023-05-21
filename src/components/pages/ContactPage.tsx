@@ -2,6 +2,18 @@ import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Contact from "@/components/contact/Contact";
 
+import { Montserrat } from "next/font/google";
+
+const font = Montserrat({ subsets: ["latin"] });
+
+interface FormData {
+	first_name: string;
+	last_name: string;
+	phone: string;
+	subject: string;
+	message: string;
+}
+
 const ContactPage: FC = () => {
 	return (
 		<>
@@ -11,7 +23,6 @@ const ContactPage: FC = () => {
 						<div className={scss.title}>
 							<h4>Contact</h4>
 						</div>
-						<Contact />
 					</div>
 				</div>
 			</div>
