@@ -4,7 +4,6 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FormattedMessage, useIntl } from "react-intl";
-import Contact from "@/components/contact/Contact";
 
 import { Montserrat } from "next/font/google";
 
@@ -92,7 +91,9 @@ const ContactPage: FC<ContactPageType> = ({ className }) => {
 				<div className="container">
 					<div className={`${scss.text__z__index} ${scss.content}`}>
 						<div className={scss.title}>
-							<h4>Contact</h4>
+							<h4>
+								<FormattedMessage id="page.contact.title" />
+							</h4>
 						</div>
 						<form className={scss.form} onSubmit={sendData}>
 							<div>
@@ -141,6 +142,7 @@ const ContactPage: FC<ContactPageType> = ({ className }) => {
 
 									<div>
 										<textarea
+											className={font.className}
 											name="message"
 											id="message"
 											placeholder={intl.formatMessage({
