@@ -55,10 +55,6 @@ const ContactPage: FC = () => {
 		}
 	};
 
-	const testButton = () => {
-		notify();
-	};
-
 	const notify = () => {
 		toast.success("Ваша форма успешно отправлена!", {
 			position: "top-right",
@@ -76,29 +72,40 @@ const ContactPage: FC = () => {
 
 	return (
 		<>
-			<div id="contact" className={scss.contact__page}>
+			<div
+				id="contact"
+				className={`${scss.text__z__index} ${scss.contact__page}`}
+			>
 				<div className="container">
-					<div className={`${scss.text__z__index} ${scss.content}`}>
+					<div className={`${scss.content}`}>
 						<div className={scss.title}>
 							<h4>
 								<FormattedMessage id="page.contact.title" />
 							</h4>
 						</div>
-						<form onSubmit={handleSubmit(sendData)}>
-							<div>
-								<div>
+
+						<div className={scss.form__content}>
+							<div className={scss.form__text}>Uj</div>
+
+							<form className={scss.form} onSubmit={handleSubmit(sendData)}>
+								<div className={scss.form__group}>
 									<input
+										className={scss.form__field}
 										type="text"
 										placeholder={intl.formatMessage({
 											id: "page.contact.input.name"
 										})}
 										{...register("name", { required: true, minLength: 2 })}
 									/>
+									<label htmlFor="name" className={scss.form__label}>
+										<FormattedMessage id="page.contact.input.name" />
+									</label>
 									{errors.name && <p>Пожалуйста, введите ваше имя.</p>}
 								</div>
 
-								<div>
+								<div className={scss.form__group}>
 									<input
+										className={scss.form__field}
 										type="text"
 										placeholder={intl.formatMessage({
 											id: "page.contact.input.email"
@@ -108,6 +115,9 @@ const ContactPage: FC = () => {
 											pattern: /^\S+@\S+$/i
 										})}
 									/>
+									<label htmlFor="email" className={scss.form__label}>
+										<FormattedMessage id="page.contact.input.email" />
+									</label>
 									{errors.email && (
 										<p>
 											Пожалуйста, введите корректный адрес электронной почты.
@@ -115,14 +125,18 @@ const ContactPage: FC = () => {
 									)}
 								</div>
 
-								<div>
+								<div className={scss.form__group}>
 									<input
+										className={scss.form__field}
 										type="text"
 										placeholder={intl.formatMessage({
 											id: "page.contact.input.subject"
 										})}
 										{...register("subject", { required: true, minLength: 2 })}
 									/>
+									<label htmlFor="subject" className={scss.form__label}>
+										<FormattedMessage id="page.contact.input.subject" />
+									</label>
 									{errors.subject && (
 										<p>
 											Пожалуйста, введите тему сообщения (минимум 2 символа).
@@ -130,19 +144,23 @@ const ContactPage: FC = () => {
 									)}
 								</div>
 
-								<div>
+								<div className={scss.form__group}>
 									<textarea
-										className={font.className}
+										className={`${font.className} ${scss.form__field}`}
 										placeholder={intl.formatMessage({
 											id: "page.contact.input.message"
 										})}
 										{...register("message")}
 									/>
+									<label htmlFor="subject" className={scss.form__label}>
+										<FormattedMessage id="page.contact.input.message" />
+									</label>
 								</div>
-							</div>
-							<button type="submit">send</button>
-						</form>
-						<button onClick={testButton}>testButton</button>
+								<button type="submit">
+									<FormattedMessage id="page.contact.send" />
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

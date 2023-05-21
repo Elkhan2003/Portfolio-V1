@@ -26,11 +26,11 @@
 	"page.about.text": "Как Middle Front-End разработчик, у меня впечатляющий арсенал навыков в HTML, CSS, JavaScript, TypeScript, React, Vite, Next JS, Node JS и SCSS. Я превосходно проектирую и поддерживаю отзывчивые веб-сайты, которые предлагают плавный пользовательский опыт. Мои экспертные знания включают создание динамичных, привлекательных интерфейсов через написание чистого и оптимизированного кода с использованием передовых инструментов и техник разработки. Я также командный игрок, который прекрасно справляется с совместной работой в команде для создания выдающихся веб-приложений.",
 	"!--!--!--CONTACT--!--!--!": "!--!--!--CONTACT--!--!--!",
 	"page.contact.title": "Контакт",
-	"page.contact.input.name": "Ваше имя*",
-	"page.contact.input.email": "Ваш email*",
-	"page.contact.input.subject": "Тема для обращения*",
-	"page.contact.input.message": "Опишите свою проблему в свободной форме*",
-	"page.contact.sending": "Отправка...",
+	"page.contact.input.name": "Ваше имя",
+	"page.contact.input.email": "Ваш email",
+	"page.contact.input.subject": "Тема для обращения",
+	"page.contact.input.message": "Ваше сообщение",
 	"page.contact.send": "Отправить",
+	"page.contact.sending": "Отправка...",
 	"page.contact.required.field": "обязательное поле"
 }
