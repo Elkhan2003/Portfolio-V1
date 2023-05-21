@@ -1,8 +1,8 @@
 {
 	"!--!--!--HEAD--!--!--!": "!--!--!--HEAD--!--!--!",
 	"page.head.home.title": "Elcho911 | Front-end Разработчик",
-	"page.head.about.title": "О нас",
 	"page.head.meta.description": "Ищете опытного веб-разработчика? Ознакомьтесь с портфолио Эльхана Шаршенбекова - Frontend, Backend и FullStack разработчика. Здесь вы найдете информацию о моих проектах и навыках, которые могут пригодиться вам в будущем!",
+	"page.head.meta.keywords": "Full-Stack Разработчик, Frontend разработчик, Backend разработчик, Эльхан Шаршенбеков, Эльчо, Эльчо911",
 	"!--!--!--HEADER--!--!--!": "!--!--!--HEADER--!--!--!",
 	"page.header.home": "Главная",
 	"page.header.about": "Обо мне",

@@ -47,12 +47,16 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	const description: any = intl.formatMessage({
 		id: "page.head.meta.description"
 	});
+	const keywords: any = intl.formatMessage({
+		id: "page.head.meta.keywords"
+	});
 
 	return (
 		<>
 			<Head>
 				<title>{title}</title>
 				<meta name="description" content={description} />
+				<meta name="keywords" content={keywords} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/heart.png" />
 				<link rel="icon" href="/heart.png" hrefLang="x-default" />
