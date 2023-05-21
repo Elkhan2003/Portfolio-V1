@@ -597,9 +597,10 @@
 				}
 
 				&:placeholder-shown ~ .form__label {
-					font-size: 1.1rem;
 					cursor: text;
 					top: 20px;
+
+					font-size: 1.1rem;
 				}
 			}
 
@@ -611,7 +612,7 @@
 				pointer-events: none;
 				color: $gray;
 
-				font-size: 0.9rem;
+				font-size: 15px;
 			}
 
 			.form__field:focus {
@@ -622,8 +623,9 @@
 					transition: 0.2s;
 					color: $primary;
 
-					font-size: 0.9rem;
+					font-size: 15px;
 				}
+
 				padding-bottom: 6px;
 				border-width: 3px;
 				border-image: linear-gradient(to right, $primary, $secondary);
