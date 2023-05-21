@@ -40,7 +40,7 @@ const ContactPage: FC = () => {
 		return messageTG;
 	};
 
-	const onSubmit = async (data: FormData) => {
+	const sendData = async (data: FormData) => {
 		try {
 			await axios.post(API_URL, {
 				chat_id: CHAT_ID,
@@ -80,7 +80,7 @@ const ContactPage: FC = () => {
 								<FormattedMessage id="page.contact.title" />
 							</h4>
 						</div>
-						<form onSubmit={handleSubmit(onSubmit)}>
+						<form onSubmit={handleSubmit(sendData)}>
 							<div>
 								<div>
 									<input
