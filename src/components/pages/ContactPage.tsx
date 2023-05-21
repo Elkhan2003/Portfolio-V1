@@ -1,9 +1,9 @@
 import React, { FC, useState } from "react";
 import scss from "./Style.module.scss";
 import axios from "axios";
+import { FormattedMessage, useIntl } from "react-intl";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { Montserrat } from "next/font/google";
 
@@ -16,11 +16,7 @@ interface FormData {
 	message: string;
 }
 
-interface ContactPageType {
-	className?: any;
-}
-
-const ContactPage: FC<ContactPageType> = ({ className }) => {
+const ContactPage: FC = () => {
 	const [formData, setFormData] = useState<FormData>({
 		name: "",
 		email: "",
