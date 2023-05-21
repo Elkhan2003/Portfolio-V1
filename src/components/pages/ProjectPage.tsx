@@ -59,7 +59,7 @@ const ProjectPage: FC = () => {
 				<div className="container">
 					<div className={scss.content}>
 						<div className={scss.title}>
-							<h4 className={`${scss.text__z__index}`}>Portfolio</h4>
+							<h4 className={`${scss.text__z__index}`}>Projects</h4>
 							<h3 className={`${scss.text__z__index}`}>
 								Each project is a unique piece of development 🧩
 							</h3>
