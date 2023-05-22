@@ -83,14 +83,16 @@ const ContactPage: FC = () => {
 			>
 				<div className="container">
 					<div className={`${scss.content}`}>
-						<div className={scss.title}>
-							<h4>
-								<FormattedMessage id="page.contact.title" />
-							</h4>
-						</div>
-
 						<div className={scss.form__content}>
-							<div className={scss.form__text}>Uj</div>
+							<div className={scss.form__text}>
+								<h4>
+									<FormattedMessage id="page.contact.title" />
+								</h4>
+								<h2>
+									Let's work <br />
+									together!
+								</h2>
+							</div>
 
 							<form className={scss.form} onSubmit={handleSubmit(sendData)}>
 								<div className={scss.form__group}>
@@ -105,7 +107,9 @@ const ContactPage: FC = () => {
 									<label htmlFor="name" className={scss.form__label}>
 										<FormattedMessage id="page.contact.input.name" />
 									</label>
-									{errors.name && <p className={scss.error}>Пожалуйста, введите ваше имя.</p>}
+									{errors.name && (
+										<p className={scss.error}>Пожалуйста, введите ваше имя.</p>
+									)}
 								</div>
 
 								<div className={scss.form__group}>
