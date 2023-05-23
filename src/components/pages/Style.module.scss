@@ -629,9 +629,13 @@
 
 				.error {
 					position: absolute;
-					font-size: 13px;
+					font-size: 14px;
 					font-weight: 500;
 					color: red;
+
+					@media (max-width: 500px) {
+						font-size: 13px;
+					}
 				}
 			}
 
