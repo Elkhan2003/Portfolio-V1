@@ -335,7 +335,7 @@
 				line-height: 1.5;
 
 				@media (max-width: 500px) {
-					font-size: 16px;
+					font-size: 14px;
 				}
 			}
 		}
@@ -418,12 +418,20 @@
 					font-size: 1.7rem;
 					position: relative;
 					text-transform: uppercase;
+
+					@media (max-width: 500px) {
+						font-size: 18px;
+					}
 				}
 
 				p {
 					font-size: 18px;
 					font-weight: 500;
 					line-height: 1.5;
+
+					@media (max-width: 500px) {
+						font-size: 14px;
+					}
 				}
 
 				.stack {
@@ -446,6 +454,11 @@
 
 						font-size: 18px;
 						font-weight: 600;
+
+						@media (max-width: 500px) {
+							padding: 7px 10px;
+							font-size: 14px;
+						}
 					}
 				}
 
@@ -469,6 +482,10 @@
 
 						&:hover {
 							color: #ef00fc;
+						}
+
+						@media (max-width: 500px) {
+							font-size: 17px;
 						}
 					}
 
@@ -523,6 +540,10 @@
 .contact__page {
 	padding: 60px 0 100px 0;
 
+	@media (max-width: 500px) {
+		padding: 10px 0 50px 0;
+	}
+
 	.content {
 		margin: 0 auto;
 		width: 100%;
@@ -540,7 +561,6 @@
 				align-items: center;
 			}
 
-			
 			@media (max-width: 570px) {
 				align-items: flex-start;
 			}

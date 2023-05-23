@@ -2,6 +2,10 @@ import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Image from "next/image";
 import project_1 from "@/assets/projects/coindom.png";
+import devx_magazine from "@/assets/projects/devx-magazine.png";
+import ortodont_group from "@/assets/projects/ortodont-group.png";
+import my_diploma from "@/assets/projects/my-diploma.png";
+import todo_list from "@/assets/projects/todo-list.png";
 import { ArrowUpRightIcon, GithubIcon } from "@/components/svgs";
 
 interface projectsTypes {
@@ -16,40 +20,40 @@ interface projectsTypes {
 const ProjectPage: FC = () => {
 	const projects: projectsTypes[] = [
 		{
-			title: "COINDOM 🪙",
+			title: "Ortodont Group 🪙",
 			description:
-				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
-			stack: ["React", "SCSS"],
-			codeLink: "#",
-			demoLink: "#",
-			image: project_1
+				"Сайт Ortodont Group является сайтом клиники стоматологии Orthodont Group. На сайте можно найти информацию о клинике, услугах, которые она предоставляет, а также записаться на прием.",
+			stack: ["NextJS", "TypeScript", "SCSS"],
+			codeLink: "https://github.com/Elkhan2003/Next-Dentist",
+			demoLink: "https://next-dentist911.vercel.app/",
+			image: ortodont_group
 		},
 		{
-			title: "COINDOM 🪙",
+			title: "DevX Magazine 🪙",
 			description:
-				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
-			stack: ["React", "SCSS"],
-			codeLink: "#",
-			demoLink: "#",
-			image: project_1
+				"DevX Magazine - журнальный сайт с возможностью онлайн-отметок людей. Используя Firebase, вы можете быстро копировать отмеченных пользователей в один клик на Copy Users 💎 и отправлять отчеты через WhatsApp и другие платформы.",
+			stack: ["React", "SCSS", "Firebase"],
+			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
+			demoLink: "https://devx911.netlify.app/",
+			image: devx_magazine
 		},
 		{
-			title: "COINDOM 🪙",
+			title: "Diploma project 🪙",
 			description:
-				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
-			stack: ["React", "SCSS"],
-			codeLink: "#",
-			demoLink: "#",
-			image: project_1
+				"Этот сайт на React разработан в рамках дипломного проекта Иссык-Кульского государственного университета имени К. Тыныстанова и является моим первым на структуре React.",
+			stack: ["React", "SCSS", "Bootstrap"],
+			codeLink: "https://github.com/Elkhan2003/Elcho911-Diploma",
+			demoLink: "https://elcho911-diploma.netlify.app/",
+			image: my_diploma
 		},
 		{
-			title: "COINDOM 🪙",
+			title: "ToDo List 🪙",
 			description:
-				"Coindom is a crypto app that allows users to search for information about various cryptocurrencies in real-time.",
-			stack: ["React", "SCSS"],
-			codeLink: "#",
-			demoLink: "#",
-			image: project_1
+				"Сайт ToDo List - это веб-приложение для составления списка задач. Оно было создано с использованием Node.JS и React. Приложение позволяет добавлять, удалять, изменять и отмечать задачи как выполненные.",
+			stack: ["React", "SCSS", "MongoDB"],
+			codeLink: "https://github.com/Elkhan2003/MongoDB-ToDoList",
+			demoLink: "https://todo-mongo911.netlify.app/",
+			image: todo_list
 		}
 	];
 
