@@ -159,6 +159,8 @@
 			.dropdown__content {
 				position: absolute;
 				background: rgba(31, 8, 47, 0.5);
+				backdrop-filter: blur(3px);
+				-webkit-backdrop-filter: blur(3px);
 				box-shadow: 0 0 30px #e3aa1b;
 				top: 42px;
 				right: 0;
