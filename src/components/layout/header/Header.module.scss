@@ -162,9 +162,11 @@
 
 			.dropdown__content {
 				position: absolute;
-				background: rgba(31, 8, 47, 0.5);
+				background: rgba(31, 8, 47, 0.7);
+
 				backdrop-filter: blur(3px);
 				-webkit-backdrop-filter: blur(3px);
+
 				box-shadow: 0 0 30px #e3aa1b;
 				top: 42px;
 				right: 0;
@@ -196,7 +198,7 @@
 					transition: 0.1s;
 
 					&:hover {
-						background: rgba(31, 8, 47, 0.4);
+						background: rgba(60, 44, 71, 0.5);
 					}
 				}
 
