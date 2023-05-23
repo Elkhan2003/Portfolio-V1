@@ -52,9 +52,11 @@ const ContactPage: FC = () => {
 				text: messageModel(data)
 			});
 
-			setSendButton(sendButton);
-			notify();
-			reset();
+			setTimeout(() => {
+				setSendButton(sendButton);
+				notify();
+				reset();
+			}, 1500);
 		} catch (err) {
 			console.log(err);
 		}
@@ -148,7 +150,7 @@ const ContactPage: FC = () => {
 									</label>
 									{errors.subject && (
 										<p className={scss.error}>
-											Пожалуйста, введите тему сообщения (минимум 2 символа).
+											Пожалуйста, введите тему сообщения.
 										</p>
 									)}
 								</div>
@@ -165,18 +167,22 @@ const ContactPage: FC = () => {
 										<FormattedMessage id="page.contact.input.message" />
 									</label>
 								</div>
-								<button
-									type="submit"
-									className={`${scss.button} ${
-										sendButton ? scss.loading : null
-									}`}
-								>
+
+								<div className={scss.button__container}>
 									{sendButton ? (
-										<FormattedMessage id="page.contact.sending" />
+										<button className={`${scss.button} ${scss.active}`}>
+											<span>
+												<FormattedMessage id="page.contact.sending" />
+											</span>
+										</button>
 									) : (
-										<FormattedMessage id="page.contact.send" />
+										<button type="submit" className={scss.button}>
+											<span>
+												<FormattedMessage id="page.contact.send" />
+											</span>
+										</button>
 									)}
-								</button>
+								</div>
 							</form>
 						</div>
 					</div>
