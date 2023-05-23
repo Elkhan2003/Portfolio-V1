@@ -9,6 +9,10 @@
 
 	.headerScroll {
 		padding: 20px 0;
+
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+
 		background: var(--header-scroll);
 
 		transition: padding 0.5s;
