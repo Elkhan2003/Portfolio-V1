@@ -334,6 +334,11 @@
 				font-weight: 500;
 				line-height: 1.5;
 
+				backdrop-filter: blur(7px);
+				-webkit-backdrop-filter: blur(7px);
+
+				border-radius: 7px;
+
 				@media (max-width: 500px) {
 					font-size: 14px;
 				}
