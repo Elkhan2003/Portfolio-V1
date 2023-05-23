@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Image from "next/image";
-import project_1 from "@/assets/projects/coindom.png";
 import devx_magazine from "@/assets/projects/devx-magazine.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
 import my_diploma from "@/assets/projects/my-diploma.png";
