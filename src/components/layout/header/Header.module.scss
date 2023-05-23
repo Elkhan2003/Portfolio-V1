@@ -211,46 +211,73 @@
 				transform: none;
 			}
 		}
-	}
 
-	// ! timetable
-	.timetable {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		//margin-left: 10px;
-
-		.icon__text {
-			display: flex;
-			align-items: center;
-			font-weight: 500;
-
-			svg {
-				$header-icon-size: 18px;
-				width: $header-icon-size;
-				height: $header-icon-size;
-			}
-
-			.text {
-				margin-left: 10px;
-			}
-
-			&:first-child {
-				margin-bottom: 5px;
-				font-size: 12px;
-				color: var(--header-timetable);
-
-				svg {
-					fill: var(--header-timetable);
+		// ! button resume
+		.resume {
+			.button {
+				padding: 8px 15px;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-family: "Permanent Marker", cursive;
+				font-weight: 400;
+				font-size: 16px;
+				border: none;
+				outline: none;
+				color: #fff;
+				background: transparent;
+				border: 1px solid white;
+				// background: -webkit-linear-gradient(-70deg, #b509bd 0%, #7a06b4 100%);
+				cursor: pointer;
+				position: relative;
+				z-index: 0;
+				border-radius: 10px;
+				&:before {
+					content: "";
+					background: -webkit-linear-gradient(-70deg, #b509bd 0%, #7a06b4 100%);
+					position: absolute;
+					top: -2px;
+					left: -2px;
+					background-size: 400%;
+					z-index: -1;
+					filter: blur(5px);
+					width: calc(100% + 4px);
+					height: calc(100% + 4px);
+					opacity: 0;
+					transition: opacity 0.3s ease-in-out;
+					border-radius: 10px;
 				}
-			}
+				&:active {
+					// color: #000;
+					&:after {
+						// background: transparent;
+						box-shadow: inset 0px 0px 5px black;
+					}
+				}
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+					border: 1px solid transparent;
+					box-shadow: 0px 0px 5px black;
+					text-shadow: 0px 0px 1px black;
+					color: #ffffff;
+				}
+				// &:before {
+				// 	opacity: 1;
+				// }
+				&:after {
+					z-index: -1;
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					// background: #111;
+					// background:  #3A0F54;
+					left: 0;
+					top: 0;
+					border-radius: 10px;
 
-			&:last-child {
-				font-size: 14px;
-				color: var(--header-timetable);
-
-				svg {
-					fill: var(--header-timetable);
+					// background: -webkit-linear-gradient(-70deg, #b509bd 0%, #7a06b4 100%);
 				}
 			}
 		}
@@ -277,7 +304,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		// align-items: center;
 		box-shadow: 0px 5px 20px #00000073;
 		border-radius: 10px;
 		max-width: 370px;
@@ -418,9 +445,33 @@
 			}
 		}
 
-		// ! timetable
-		.timetable {
-			margin: 15px 0 0 0;
+		// ! button resume
+		.resume {
+			margin: 15px 0;
+
+			.button {
+				padding: 8px 15px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background: #20123e8f;
+				// background: #25252985;
+
+				text-decoration: none;
+				padding: 10px 15px;
+				border-radius: 7px;
+				border: 1px solid transparent;
+				line-height: 24px;
+				font-size: 14px;
+				font-weight: 600;
+
+				color: #c1c1ca;
+
+				svg {
+					font-size: 18px;
+				}
+			}
 		}
 	}
 }

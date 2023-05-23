@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { FormattedMessage } from "react-intl";
 import scss from "./Header.module.scss";
-import { LangIcon, ArrowIcon } from "@/components/svgs";
+import { LangIcon, ArrowIcon, ArrowUpRightIcon } from "@/components/svgs";
 import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
 
 // PermanentMarker
@@ -179,19 +179,16 @@ const Header: FC<HeaderProps> = (props) => {
 										</div>
 									</div>
 
-									{/* ! timetable */}
-									{/*<div className={scss.timetable}>*/}
-									{/*	<div className={scss.icon__text}>*/}
-									{/*		<TimeIcon />*/}
-									{/*		<p className={scss.text}>*/}
-									{/*			<FormattedMessage id="page.header.timetable" />*/}
-									{/*		</p>*/}
-									{/*	</div>*/}
-									{/*	<div className={scss.icon__text}>*/}
-									{/*		<PhoneIcon />*/}
-									{/*		<p className={scss.text}>+996 990 38 50 56</p>*/}
-									{/*	</div>*/}
-									{/*</div>*/}
+									{/* ! resume */}
+									<div className={scss.resume}>
+										<a
+											className={scss.button}
+											href="/resume-elcho911.pdf"
+											target="_blank"
+										>
+											Resume
+										</a>
+									</div>
 								</div>
 							</div>
 
@@ -274,6 +271,18 @@ const Header: FC<HeaderProps> = (props) => {
 											</Link>
 										))}
 									</div>
+								</div>
+
+								{/* ! resume */}
+								<div className={scss.resume}>
+									<a
+										className={scss.button}
+										href="/resume-elcho911.pdf"
+										target="_blank"
+									>
+										Resume
+										<ArrowUpRightIcon />
+									</a>
 								</div>
 
 								{/* ! timetable */}
