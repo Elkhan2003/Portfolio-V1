@@ -187,6 +187,7 @@ const Header: FC<HeaderProps> = (props) => {
 											target="_blank"
 										>
 											Resume
+											<ArrowUpRightIcon />
 										</a>
 									</div>
 								</div>
