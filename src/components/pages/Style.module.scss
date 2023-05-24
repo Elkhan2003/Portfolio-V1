@@ -528,11 +528,11 @@
 						height: auto;
 
 						transform: translateY(0%);
-						transition: transform 5s ease-in-out 0s;
+						transition: transform 2s ease-in-out 0s;
 
 						&:hover {
 							transform: translateY(-50%);
-							transition: transform 5s ease-in-out 0s;
+							transition: transform 2s ease-in-out 0s;
 						}
 					}
 				}
