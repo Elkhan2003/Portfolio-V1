@@ -57,6 +57,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<title>{title}</title>
 				<meta name="description" content={description} />
 				<meta name="keywords" content={keywords} />
+				<meta name="robots" content="index, follow" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/heart.png" />
 				<link rel="icon" href="/heart.png" hrefLang="x-default" />
