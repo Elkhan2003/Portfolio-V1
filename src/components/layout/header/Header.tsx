@@ -15,6 +15,7 @@ interface HeaderProps extends IsOpenProps {}
 
 interface linksProps {
 	to: string;
+	href: string;
 	label: any;
 	spy: boolean;
 	smooth: boolean;
@@ -52,6 +53,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.home" />,
 			to: "/",
+			href: '#home',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -60,6 +62,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.about" />,
 			to: "about",
+			href: '#about',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -68,6 +71,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.project" />,
 			to: "project",
+			href: '#project',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -76,6 +80,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.contact" />,
 			to: "contact",
+			href: '#contact',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -131,6 +136,7 @@ const Header: FC<HeaderProps> = (props) => {
 											<ScrollLink
 												key={index + 1}
 												to={link.to}
+												href={link.href}
 												spy={link.spy}
 												smooth={link.smooth}
 												offset={link.offset}
@@ -205,6 +211,7 @@ const Header: FC<HeaderProps> = (props) => {
 									<ScrollLink
 										key={index + 1}
 										to={link.to}
+										href={link.href}
 										spy={link.spy}
 										smooth={link.smooth}
 										offset={link.offset}
