@@ -62,12 +62,12 @@ const ProjectPage: FC = () => {
 				<div className="container">
 					<div className={scss.content}>
 						<div className={scss.title}>
-							<h4>
+							<h1>
 								<FormattedMessage id="page.project.title_1" />
-							</h4>
-							<h3>
+							</h1>
+							<h2>
 								<FormattedMessage id="page.project.title_2" />
-							</h3>
+							</h2>
 						</div>
 
 						{projects.map((project, index) => (

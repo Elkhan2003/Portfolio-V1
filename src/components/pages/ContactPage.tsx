@@ -87,9 +87,9 @@ const ContactPage: FC = () => {
 					<div className={`${scss.content}`}>
 						<div className={scss.form__content}>
 							<div className={scss.form__text}>
-								<h4>
+								<h1>
 									<FormattedMessage id="page.contact.title" />
-								</h4>
+								</h1>
 								<h2>
 									Let's work <br />
 									together!
