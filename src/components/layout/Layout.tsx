@@ -73,10 +73,10 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<meta name="keywords" content={keywords} />
 				<meta name="robots" content="index, follow" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/heart.png" />
-				<link rel="icon" href="/heart.png" hrefLang="x-default" />
-				<link rel="icon" href="/heart.png" hrefLang="en" />
-				<link rel="icon" href="/heart.png" hrefLang="ru" />
+				<link rel="icon" href="/code-icon.png" />
+				<link rel="icon" href="/code-icon.png" hrefLang="x-default" />
+				<link rel="icon" href="/code-icon.png" hrefLang="en" />
+				<link rel="icon" href="/code-icon.png" hrefLang="ru" />
 			</Head>
 			<div dir={dir}>
 				{isCanvasVisible && <canvas className={scss.canvas} id="canvas" />}
