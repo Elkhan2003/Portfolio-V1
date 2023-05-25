@@ -9,14 +9,14 @@ const Footer: FC = () => {
 				<div className="container">
 					<div className={scss.content}>
 						<p>Copyright © 2023. All rights are reserved</p>
-						<h4 className={scss.center__text}>
+						<p className={scss.center__text}>
 							Built with<span className={scss.heart}>♡</span>by
 							<span>
 								<a href="https://nextjs.org/" target="_blank">
 									NextTS
 								</a>
 							</span>
-						</h4>
+						</p>
 						<div className={`${scss.my__icons}`}>
 							<a
 								className={scss.icon}
