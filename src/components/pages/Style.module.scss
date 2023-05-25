@@ -491,6 +491,10 @@
 
 					cursor: default;
 
+					@media (max-width: 500px) {
+						gap: 10px;
+					}
+
 					p {
 						background: -webkit-linear-gradient(
 							-70deg,
@@ -504,7 +508,7 @@
 						font-weight: 600;
 
 						@media (max-width: 500px) {
-							padding: 7px 10px;
+							padding: 5px 7px;
 							font-size: 14px;
 						}
 

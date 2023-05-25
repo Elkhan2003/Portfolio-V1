@@ -46,7 +46,7 @@ const ProjectPage: FC = () => {
 		{
 			title: "ToDo List 🪙",
 			description: <FormattedMessage id="page.project.text.todo_list" />,
-			stack: ["React", "SCSS", "MongoDB"],
+			stack: ["React", "SCSS", "NodeJS", "MongoDB"],
 			codeLink: "https://github.com/Elkhan2003/MongoDB-ToDoList",
 			demoLink: "https://todo-mongo911.netlify.app/",
 			image: todo_list
