@@ -53,7 +53,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.home" />,
 			to: "/",
-			href: '#home',
+			href: "#home",
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -62,7 +62,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.about" />,
 			to: "about",
-			href: '#about',
+			href: "#about",
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -71,7 +71,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.project" />,
 			to: "project",
-			href: '#project',
+			href: "#project",
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -80,7 +80,7 @@ const Header: FC<HeaderProps> = (props) => {
 		{
 			label: <FormattedMessage id="page.header.contact" />,
 			to: "contact",
-			href: '#contact',
+			href: "#contact",
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -111,6 +111,7 @@ const Header: FC<HeaderProps> = (props) => {
 								<ScrollLink
 									to="/"
 									spy={true}
+									href="#home"
 									smooth={true}
 									offset={offsetScroll}
 									duration={durationScroll}
