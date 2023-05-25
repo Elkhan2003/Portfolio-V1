@@ -177,12 +177,8 @@
 
 			.dropdown__content {
 				position: absolute;
-				background: rgba(31, 8, 47, 0.7);
+				background: rgba(31, 8, 47, 0.9);
 
-				backdrop-filter: blur(3px);
-				-webkit-backdrop-filter: blur(3px);
-
-				box-shadow: 0 0 30px #e3aa1b;
 				top: 42px;
 				right: 0;
 				opacity: 0;
@@ -254,6 +250,7 @@
 
 				backdrop-filter: blur(2px);
 				-webkit-backdrop-filter: blur(2px);
+
 				// background: #20123e3d;
 				background: transparent;
 				border: 1px solid #7979795d;
