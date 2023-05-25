@@ -523,11 +523,12 @@
 
 				.links {
 					gap: 30px;
-					margin-top: 40px;
+					margin-top: 20px;
 					display: flex;
 					justify-content: center;
 
 					a {
+						padding: 12px 5px;
 						display: flex;
 						justify-content: center;
 						align-items: center;
