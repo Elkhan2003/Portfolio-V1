@@ -7,132 +7,110 @@ interface Point {
 	originX: number;
 	originY: number;
 	closest: Point[];
-	active?: number;
-	circle?: Circle;
+	active: number;
+	circle: Circle;
 }
 
 interface Circle {
-	pos: Point | null;
-	radius: number | null;
-	color: string | null;
-	active?: number;
+	pos: Point;
+	radius: number;
+	color: string;
+	active: number;
 	draw: () => void;
+}
+
+interface Coordinates {
+	x: number;
+	y: number;
 }
 
 const useScript_V2 = (url: string): void => {
 	useEffect(() => {
 		(function () {
-			let width: number,
-				height: number,
-				canvas: HTMLCanvasElement,
-				ctx: CanvasRenderingContext2D,
-				points: Point[],
-				target: any,
-				animateHeader = true,
-				mouseX = 0,
+			const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+			const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+			let width: number = window.innerWidth;
+			let height: number = window.innerHeight;
+			const target = { x: width / 2, y: height / 2 };
+			let points: Point[] = [];
+			let animateHeader = true;
+			let mouseX = 0,
 				mouseY = 0;
 
-			// Main
-			initHeader();
-			initAnimation();
-			addListeners();
+			if (width > 500) {
+				mouseX = target.x;
+				mouseY = target.y;
+			}
 
-			function initHeader() {
-				width = window.innerWidth;
-				height = window.innerHeight;
-				target = { x: width / 2, y: height / 2 };
+			canvas.width = width;
+			canvas.height = height;
 
-				// ! position center
-				if (width > 500) {
-					// Проверяем ширину экрана
-					mouseX = target.x;
-					mouseY = target.y;
-				}
+			const stepX = width / 20;
+			const stepY = height / 20;
 
-				canvas = document.getElementById("canvas") as HTMLCanvasElement;
-				canvas.width = width;
-				canvas.height = height;
-				ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
-
-				// create points
-				points = [];
-				for (let x = 0; x < width; x = x + width / 20) {
-					for (let y = 0; y < height; y = y + height / 20) {
-						const px = x + (Math.random() * width) / 20;
-						const py = y + (Math.random() * height) / 20;
-						const p: Point = {
-							x: px,
-							originX: px,
-							y: py,
-							originY: py,
-							closest: []
-						};
-						points.push(p);
-					}
-				}
-
-				// for each point find the 5 closest points
-				for (let i = 0; i < points.length; i++) {
-					const closest: Point[] = [];
-					const p1 = points[i];
-					for (let j = 0; j < points.length; j++) {
-						const p2 = points[j];
-						if (p1 !== p2) {
-							let placed = false;
-							for (let k = 0; k < 5; k++) {
-								if (!placed) {
-									if (closest[k] === undefined) {
-										closest[k] = p2;
-										placed = true;
-									}
-								}
-							}
-
-							for (let k = 0; k < 5; k++) {
-								if (!placed) {
-									if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
-										closest[k] = p2;
-										placed = true;
-									}
-								}
-							}
-						}
-					}
-					p1.closest = closest;
-				}
-
-				// assign a circle to each point
-				for (const point of points) {
-					const c: Circle = {
-						pos: point,
-						radius: 2 + Math.random() * 2,
-						color: "rgba(255,255,255,0.3)",
-						draw: function () {
-							if (!this.active) return;
-							ctx.beginPath();
-							ctx.arc(
-								this.pos !== null ? this.pos.x : 0,
-								this.pos !== null ? this.pos.y : 0,
-								this.radius !== null ? this.radius : 0,
-								0,
-								2 * Math.PI,
-								false
-							);
-							ctx.fillStyle = "rgba(255,255,255," + this.active + ")";
-							ctx.fill();
-						}
+			for (let x = 0; x < width; x += stepX) {
+				for (let y = 0; y < height; y += stepY) {
+					const px = x + Math.random() * stepX;
+					const py = y + Math.random() * stepY;
+					const point: Point = {
+						x: px,
+						originX: px,
+						y: py,
+						originY: py,
+						closest: [],
+						active: 0,
+						circle: {} as Circle
 					};
-					point.circle = c;
+					points.push(point);
 				}
 			}
 
-			// Event handling
-			function addListeners() {
-				if (!("ontouchstart" in window)) {
-					window.addEventListener("mousemove", mouseMove);
-				}
-				window.addEventListener("resize", resize);
+			points.forEach((p1, i) => {
+				const closest: Point[] = [];
+				points.forEach((p2, j) => {
+					if (p1 !== p2) {
+						let placed = false;
+						for (let k = 0; k < 5; k++) {
+							if (!placed) {
+								if (closest[k] === undefined) {
+									closest[k] = p2;
+									placed = true;
+								}
+							}
+						}
+						for (let k = 0; k < 5; k++) {
+							if (!placed) {
+								if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+									closest[k] = p2;
+									placed = true;
+								}
+							}
+						}
+					}
+				});
+				p1.closest = closest;
+			});
+
+			points.forEach((point) => {
+				const circle: Circle = {
+					pos: point,
+					radius: 2 + Math.random() * 2,
+					color: "rgba(255,255,255,0.3)",
+					active: 0,
+					draw: function () {
+						ctx.beginPath();
+						ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+						ctx.fillStyle = "rgba(255,255,255," + this.active + ")";
+						ctx.fill();
+					}
+				};
+				point.circle = circle;
+			});
+
+			if (!("ontouchstart" in window)) {
+				window.addEventListener("mousemove", mouseMove);
 			}
+			window.addEventListener("resize", resize);
 
 			function mouseMove(e: MouseEvent) {
 				mouseX = e.clientX;
@@ -145,21 +123,11 @@ const useScript_V2 = (url: string): void => {
 				canvas.width = width;
 				canvas.height = height;
 
-				// ! position center
 				if (width > 500) {
-					// Проверяем ширину экрана
 					target.x = width / 2;
 					target.y = height / 2;
 					mouseX = target.x;
 					mouseY = target.y;
-				}
-			}
-
-			// animation
-			function initAnimation() {
-				animate();
-				for (const point of points) {
-					shiftPoint(point);
 				}
 			}
 
@@ -170,27 +138,30 @@ const useScript_V2 = (url: string): void => {
 
 					ctx.clearRect(0, 0, width, height);
 					for (const point of points) {
-						// detect points in range
-						if (Math.abs(getDistance(target, point)) < 4000) {
+						const dist = Math.abs(getDistance(target, point));
+						if (dist < 4000) {
 							point.active = 0.3;
-							point.circle!.active = 0.6;
-						} else if (Math.abs(getDistance(target, point)) < 20000) {
+							point.circle.active = 0.6;
+						} else if (dist < 20000) {
 							point.active = 0.1;
-							point.circle!.active = 0.3;
-						} else if (Math.abs(getDistance(target, point)) < 40000) {
+							point.circle.active = 0.3;
+						} else if (dist < 40000) {
 							point.active = 0.02;
-							point.circle!.active = 0.1;
+							point.circle.active = 0.1;
 						} else {
 							point.active = 0;
-							point.circle!.active = 0;
+							point.circle.active = 0;
 						}
 
 						drawLines(point);
-						point.circle!.draw();
+						point.circle.draw();
 					}
 				}
 				requestAnimationFrame(animate);
 			}
+
+			animate();
+			points.forEach(shiftPoint);
 
 			function shiftPoint(p: Point) {
 				gsap.to(p, {
@@ -198,13 +169,12 @@ const useScript_V2 = (url: string): void => {
 					x: p.originX - 50 + Math.random() * 100,
 					y: p.originY - 50 + Math.random() * 100,
 					ease: "power2.inOut",
-					onComplete: function () {
+					onComplete: () => {
 						shiftPoint(p);
 					}
 				});
 			}
 
-			// Canvas manipulation
 			function drawLines(p: Point) {
 				if (!p.active) return;
 				for (const closestPoint of p.closest) {
@@ -216,8 +186,7 @@ const useScript_V2 = (url: string): void => {
 				}
 			}
 
-			// Util
-			function getDistance(p1: Point, p2: Point) {
+			function getDistance(p1: Coordinates, p2: Coordinates) {
 				return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
 			}
 		})();
