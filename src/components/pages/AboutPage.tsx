@@ -32,12 +32,12 @@ const AboutPage: FC = () => {
 							</span>
 						</div>
 						<div className={scss.right}>
-							<h4 className={`${scss.text__z__index}`}>
-								<FormattedMessage id="page.about.title_1" />
-							</h4>
 							<h3 className={`${scss.text__z__index}`}>
-								<FormattedMessage id="page.about.title_2" />
+								<FormattedMessage id="page.about.title_1" />
 							</h3>
+							<h4 className={`${scss.text__z__index}`}>
+								<FormattedMessage id="page.about.title_2" />
+							</h4>
 							<p className={`${scss.text__z__index}`}>
 								<FormattedMessage id="page.about.text" />
 							</p>
