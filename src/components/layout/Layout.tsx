@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, ReactNode, useEffect, useState } from "react";
 import scss from "./Layout.module.scss";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
@@ -31,6 +31,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false);
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] =
 		useState<boolean>(false);
+	const [isCanvasVisible, setIsCanvasVisible] = useState<boolean>(true);
 
 	const props: any = {
 		isOpen,
@@ -40,6 +41,19 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 		isOpenDropdownLanguage,
 		setIsOpenDropdownLanguage
 	};
+
+	useEffect(() => {
+		const updateCanvasVisibility = () => {
+			setIsCanvasVisible(window.innerWidth > 500);
+		};
+
+		updateCanvasVisibility(); // проверка при первоначальной загрузке
+
+		window.addEventListener("resize", updateCanvasVisibility);
+
+		// Удалите обработчик при размонтировании компонента
+		return () => window.removeEventListener("resize", updateCanvasVisibility);
+	}, []); // Пустой массив в качестве зависимости, чтобы обработчик устанавливался только при монтировании компонента
 
 	const intl: any = useIntl();
 
@@ -65,7 +79,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<link rel="icon" href="/heart.png" hrefLang="ru" />
 			</Head>
 			<div dir={dir}>
-				<canvas className={scss.canvas} id="canvas" />
+				{isCanvasVisible && <canvas className={scss.canvas} id="canvas" />}
 				<div className={`${scss.layout} ${font.className}`}>
 					<header>
 						<Header {...props} />
