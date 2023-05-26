@@ -48,20 +48,6 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 		}, 1600);
 	});
 
-	const [isCanvasVisible, setIsCanvasVisible] = useState<boolean>(true);
-	useEffect(() => {
-		const updateCanvasVisibility = () => {
-			setIsCanvasVisible(window.innerWidth > 500);
-		};
-
-		updateCanvasVisibility(); // проверка при первоначальной загрузке
-
-		window.addEventListener("resize", updateCanvasVisibility);
-
-		// Удалите обработчик при размонтировании компонента
-		return () => window.removeEventListener("resize", updateCanvasVisibility);
-	}, []); // Пустой массив в качестве зависимости, чтобы обработчик устанавливался только при монтировании компонента
-
 	const intl: any = useIntl();
 	const title: any = intl.formatMessage({ id: "page.head.home.title" });
 	const description: any = intl.formatMessage({
@@ -88,7 +74,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<div>Loading...</div>
 			) : (
 				<div dir={dir}>
-					{isCanvasVisible && <canvas className={scss.canvas} id="canvas" />}
+					<canvas className={scss.canvas} id="canvas" />
 					<div className={`${scss.layout} ${font.className}`}>
 						<header>
 							<Header {...props} />
