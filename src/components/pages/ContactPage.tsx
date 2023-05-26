@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Tilt from "react-parallax-tilt";
 
 import { Montserrat } from "next/font/google";
 
@@ -96,94 +97,106 @@ const ContactPage: FC = () => {
 								</h2>
 							</div>
 
-							<form className={scss.form} onSubmit={handleSubmit(sendData)}>
-								<div className={scss.form__group}>
-									<input
-										className={scss.form__field}
-										type="text"
-										placeholder={intl.formatMessage({
-											id: "page.contact.input.name"
-										})}
-										{...register("name", { required: true, minLength: 2 })}
-									/>
-									<label htmlFor="name" className={scss.form__label}>
-										<FormattedMessage id="page.contact.input.name" />
-									</label>
-									{errors.name && (
-										<p className={scss.error}>Пожалуйста, введите ваше имя.</p>
-									)}
-								</div>
+							<Tilt
+								className={scss.tilt}
+								tiltMaxAngleX={4}
+								tiltMaxAngleY={4}
+								glareEnable={true}
+								glareMaxOpacity={0.05}
+								glareColor="lightblue"
+								glarePosition="all"
+							>
+								<form className={scss.form} onSubmit={handleSubmit(sendData)}>
+									<div className={scss.form__group}>
+										<input
+											className={scss.form__field}
+											type="text"
+											placeholder={intl.formatMessage({
+												id: "page.contact.input.name"
+											})}
+											{...register("name", { required: true, minLength: 2 })}
+										/>
+										<label htmlFor="name" className={scss.form__label}>
+											<FormattedMessage id="page.contact.input.name" />
+										</label>
+										{errors.name && (
+											<p className={scss.error}>
+												Пожалуйста, введите ваше имя.
+											</p>
+										)}
+									</div>
 
-								<div className={scss.form__group}>
-									<input
-										className={scss.form__field}
-										type="text"
-										placeholder={intl.formatMessage({
-											id: "page.contact.input.email"
-										})}
-										{...register("email", {
-											required: true,
-											pattern: /^\S+@\S+$/i
-										})}
-									/>
-									<label htmlFor="email" className={scss.form__label}>
-										<FormattedMessage id="page.contact.input.email" />
-									</label>
-									{errors.email && (
-										<p className={scss.error}>
-											Пожалуйста, введите корректный адрес электронной почты.
-										</p>
-									)}
-								</div>
+									<div className={scss.form__group}>
+										<input
+											className={scss.form__field}
+											type="text"
+											placeholder={intl.formatMessage({
+												id: "page.contact.input.email"
+											})}
+											{...register("email", {
+												required: true,
+												pattern: /^\S+@\S+$/i
+											})}
+										/>
+										<label htmlFor="email" className={scss.form__label}>
+											<FormattedMessage id="page.contact.input.email" />
+										</label>
+										{errors.email && (
+											<p className={scss.error}>
+												Пожалуйста, введите корректный адрес электронной почты.
+											</p>
+										)}
+									</div>
 
-								<div className={scss.form__group}>
-									<input
-										className={scss.form__field}
-										type="text"
-										placeholder={intl.formatMessage({
-											id: "page.contact.input.subject"
-										})}
-										{...register("subject", { required: true, minLength: 2 })}
-									/>
-									<label htmlFor="subject" className={scss.form__label}>
-										<FormattedMessage id="page.contact.input.subject" />
-									</label>
-									{errors.subject && (
-										<p className={scss.error}>
-											Пожалуйста, введите тему сообщения.
-										</p>
-									)}
-								</div>
+									<div className={scss.form__group}>
+										<input
+											className={scss.form__field}
+											type="text"
+											placeholder={intl.formatMessage({
+												id: "page.contact.input.subject"
+											})}
+											{...register("subject", { required: true, minLength: 2 })}
+										/>
+										<label htmlFor="subject" className={scss.form__label}>
+											<FormattedMessage id="page.contact.input.subject" />
+										</label>
+										{errors.subject && (
+											<p className={scss.error}>
+												Пожалуйста, введите тему сообщения.
+											</p>
+										)}
+									</div>
 
-								<div className={scss.form__group}>
-									<textarea
-										className={`${font.className} ${scss.form__field}`}
-										placeholder={intl.formatMessage({
-											id: "page.contact.input.message"
-										})}
-										{...register("message")}
-									/>
-									<label htmlFor="subject" className={scss.form__label}>
-										<FormattedMessage id="page.contact.input.message" />
-									</label>
-								</div>
+									<div className={scss.form__group}>
+										<textarea
+											className={`${font.className} ${scss.form__field}`}
+											placeholder={intl.formatMessage({
+												id: "page.contact.input.message"
+											})}
+											{...register("message")}
+										/>
+										<label htmlFor="subject" className={scss.form__label}>
+											<FormattedMessage id="page.contact.input.message" />
+										</label>
+									</div>
 
-								<div className={scss.button__container}>
-									{sendButton ? (
-										<button className={`${scss.button} ${scss.active}`}>
-											<span>
-												<FormattedMessage id="page.contact.sending" />
-											</span>
-										</button>
-									) : (
-										<button type="submit" className={scss.button}>
-											<span>
-												<FormattedMessage id="page.contact.send" />
-											</span>
-										</button>
-									)}
-								</div>
-							</form>
+									<div className={scss.button__container}>
+										{sendButton ? (
+											<button className={`${scss.button} ${scss.active}`}>
+												<span>
+													<FormattedMessage id="page.contact.sending" />
+												</span>
+											</button>
+										) : (
+											<button type="submit" className={scss.button}>
+												<span>
+													<FormattedMessage id="page.contact.send" />
+												</span>
+											</button>
+										)}
+									</div>
+								</form>
+							</Tilt>
 						</div>
 					</div>
 				</div>
