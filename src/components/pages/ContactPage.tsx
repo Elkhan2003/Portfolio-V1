@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import scss from "./Style.module.scss";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -19,7 +19,22 @@ interface FormData {
 }
 
 const ContactPage: FC = () => {
-	const [sendButton, setSendButton] = useState(false);
+	const [sendButton, setSendButton] = useState<boolean>(false);
+	const [isTiltActive, setIsTiltActive] = useState<boolean>(false);
+
+	useEffect(() => {
+		const updateTiltActive = () => {
+			setIsTiltActive(window.innerWidth > 500);
+		};
+
+		updateTiltActive();
+
+		window.addEventListener("resize", updateTiltActive);
+
+		return () => {
+			window.removeEventListener("resize", updateTiltActive);
+		};
+	});
 
 	const {
 		register,
@@ -99,9 +114,10 @@ const ContactPage: FC = () => {
 
 							<Tilt
 								className={scss.tilt}
+								tiltEnable={isTiltActive}
 								tiltMaxAngleX={4}
 								tiltMaxAngleY={4}
-								glareEnable={true}
+								glareEnable={isTiltActive}
 								glareMaxOpacity={0.05}
 								glareColor="lightblue"
 								glarePosition="all"
