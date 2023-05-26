@@ -71,7 +71,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<link rel="icon" href="/code-icon.png" hrefLang="ru" />
 			</Head>
 			{loading ? (
-				<div>Loading...</div>
+				<div className={font.className}>Loading...</div>
 			) : (
 				<div dir={dir}>
 					<canvas className={scss.canvas} id="canvas" />
