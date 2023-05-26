@@ -13,17 +13,19 @@ const messages: any = {
 	ru
 };
 
-function getDirection(locale: any): "ltr" {
+function getDirection(locale: string): string {
 	return "ltr";
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-	const { locale }: any = useRouter();
+	const router = useRouter();
+	const locale = router.locale || "en";
 
 	return (
-		// @ts-ignore
-		<IntlProvider locale={locale} messages={messages[locale]}>
-			<Component {...pageProps} dir={getDirection(locale)} />
-		</IntlProvider>
+		<>
+			<IntlProvider locale={locale} messages={messages[locale]}>
+				<Component {...pageProps} dir={getDirection(locale)} />
+			</IntlProvider>
+		</>
 	);
 }

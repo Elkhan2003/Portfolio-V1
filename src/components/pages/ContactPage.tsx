@@ -115,12 +115,8 @@ const ContactPage: FC = () => {
 							<Tilt
 								className={scss.tilt}
 								tiltEnable={isTiltActive}
-								tiltMaxAngleX={4}
-								tiltMaxAngleY={4}
-								glareEnable={isTiltActive}
-								glareMaxOpacity={0.05}
-								glareColor="lightblue"
-								glarePosition="all"
+								tiltMaxAngleX={3}
+								tiltMaxAngleY={3}
 							>
 								<form className={scss.form} onSubmit={handleSubmit(sendData)}>
 									<div className={scss.form__group}>

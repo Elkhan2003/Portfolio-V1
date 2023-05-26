@@ -31,7 +31,6 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false);
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] =
 		useState<boolean>(false);
-	const [isCanvasVisible, setIsCanvasVisible] = useState<boolean>(true);
 
 	const props: any = {
 		isOpen,
@@ -42,6 +41,14 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 		setIsOpenDropdownLanguage
 	};
 
+	const [loading, setLoading] = useState(true);
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 1600);
+	});
+
+	const [isCanvasVisible, setIsCanvasVisible] = useState<boolean>(true);
 	useEffect(() => {
 		const updateCanvasVisibility = () => {
 			setIsCanvasVisible(window.innerWidth > 500);
@@ -56,7 +63,6 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	}, []); // Пустой массив в качестве зависимости, чтобы обработчик устанавливался только при монтировании компонента
 
 	const intl: any = useIntl();
-
 	const title: any = intl.formatMessage({ id: "page.head.home.title" });
 	const description: any = intl.formatMessage({
 		id: "page.head.meta.description"
@@ -78,18 +84,22 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<link rel="icon" href="/code-icon.png" hrefLang="en" />
 				<link rel="icon" href="/code-icon.png" hrefLang="ru" />
 			</Head>
-			<div dir={dir}>
-				{isCanvasVisible && <canvas className={scss.canvas} id="canvas" />}
-				<div className={`${scss.layout} ${font.className}`}>
-					<header>
-						<Header {...props} />
-					</header>
-					<main>{children}</main>
-					<footer>
-						<Footer />
-					</footer>
+			{loading ? (
+				<div>Loading...</div>
+			) : (
+				<div dir={dir}>
+					{isCanvasVisible && <canvas className={scss.canvas} id="canvas" />}
+					<div className={`${scss.layout} ${font.className}`}>
+						<header>
+							<Header {...props} />
+						</header>
+						<main>{children}</main>
+						<footer>
+							<Footer />
+						</footer>
+					</div>
 				</div>
-			</div>
+			)}
 		</>
 	);
 };
