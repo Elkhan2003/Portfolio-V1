@@ -38,7 +38,7 @@ const TypingText: FC = () => {
 			loop={true}
 			cursor={true}
 			cursorStyle="📍"
-			typeSpeed={18}
+			typeSpeed={16}
 			deleteSpeed={10000000}
 			delaySpeed={1500}
 		/>
