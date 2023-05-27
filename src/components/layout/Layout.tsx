@@ -31,6 +31,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false);
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] =
 		useState<boolean>(false);
+	const [loading, setLoading] = useState<boolean>(true);
 
 	const props: any = {
 		isOpen,
@@ -41,12 +42,17 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 		setIsOpenDropdownLanguage
 	};
 
-	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1600);
-	});
+		}, 1500);
+	}, []);
+
+	// useEffect(() => {
+	// 	window.onload = () => {
+	// 		setLoading(false);
+	// 	};
+	// }, []);
 
 	const intl: any = useIntl();
 	const title: any = intl.formatMessage({ id: "page.head.home.title" });
