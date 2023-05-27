@@ -2,47 +2,21 @@ import React, { FC } from "react";
 import scss from "@/components/pages/Style.module.scss";
 import SpringText from "@/components/spring-text/SpringText";
 import { GithubIcon, LinkedinIcon } from "@/components/svgs";
-import Image from "next/image";
-import html_icon from "@/assets/tech-icons/html-icon.png";
-import css_icon from "@/assets/tech-icons/css-icon.png";
-import java_script_icon from "@/assets/tech-icons/java-script-icon.png";
-import type_script_icon from "@/assets/tech-icons/type-script-icon.png";
-import react_icon from "@/assets/tech-icons/react-icon.png";
-import vite_icon from "@/assets/tech-icons/vite-icon.png";
-import next_icon from "@/assets/tech-icons/next-js-icon.png";
-import node_icon from "@/assets/tech-icons/node-js-icon.png";
-import scss_icon from "@/assets/tech-icons/scss-icon.png";
+import Image, { StaticImageData } from "next/image";
+import * as TechIcons from "@/assets/tech-icons";
 import { FormattedMessage } from "react-intl";
 
 const HomePage: FC = () => {
-	const tech_icons = [
-		{
-			icon: html_icon
-		},
-		{
-			icon: css_icon
-		},
-		{
-			icon: java_script_icon
-		},
-		{
-			icon: type_script_icon
-		},
-		{
-			icon: react_icon
-		},
-		{
-			icon: vite_icon
-		},
-		{
-			icon: next_icon
-		},
-		{
-			icon: node_icon
-		},
-		{
-			icon: scss_icon
-		}
+	const tech_icons: StaticImageData[] = [
+		TechIcons.html_icon,
+		TechIcons.css_icon,
+		TechIcons.java_script_icon,
+		TechIcons.type_script_icon,
+		TechIcons.react_icon,
+		TechIcons.vite_icon,
+		TechIcons.next_icon,
+		TechIcons.node_icon,
+		TechIcons.scss_icon
 	];
 
 	return (
@@ -107,7 +81,7 @@ const HomePage: FC = () => {
 												quality={25}
 												loading="eager"
 												className={scss.icon}
-												src={item.icon}
+												src={item}
 												alt={"icon"}
 											/>
 										</div>
