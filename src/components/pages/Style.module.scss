@@ -87,6 +87,11 @@
 				.my__self {
 					margin-bottom: 25px;
 					max-width: 700px;
+					height: 60px;
+
+					@media (max-width: 768px) {
+						height: 115px;
+					}
 				}
 
 				.my__icons {
@@ -801,6 +806,7 @@
 						&:before {
 							inset: -3px;
 						}
+
 						&:after {
 							inset: -3px;
 							filter: blur(10px);
@@ -811,6 +817,7 @@
 						&:before {
 							inset: -3px;
 						}
+
 						&:after {
 							inset: -3px;
 							filter: blur(10px);
@@ -849,6 +856,7 @@
 					}
 				}
 			}
+
 			.button__container .button:before,
 			.button__container .button:after {
 				content: "";
@@ -864,6 +872,7 @@
 			}
 		}
 	}
+
 	input:-webkit-autofill {
 		-webkit-box-shadow: 0 0 0px 1000px rgb(184, 73, 218) inset;
 	}

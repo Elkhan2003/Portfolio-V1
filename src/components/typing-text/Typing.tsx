@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { useIntl } from "react-intl";
 import { Typewriter } from "react-simple-typewriter";
 
-const SpringText: FC = () => {
+const TypingTitle: FC = () => {
 	const intl = useIntl();
 
 	const texts = [
@@ -27,4 +27,22 @@ const SpringText: FC = () => {
 	);
 };
 
-export default SpringText;
+const TypingText: FC = () => {
+	const intl = useIntl();
+
+	const texts = [intl.formatMessage({ id: "page.home.my__self" })];
+
+	return (
+		<Typewriter
+			words={texts}
+			loop={true}
+			cursor={true}
+			cursorStyle="📍"
+			typeSpeed={18}
+			deleteSpeed={10000000}
+			delaySpeed={1500}
+		/>
+	);
+};
+
+export { TypingTitle, TypingText };

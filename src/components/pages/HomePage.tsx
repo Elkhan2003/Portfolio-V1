@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import scss from "@/components/pages/Style.module.scss";
-import SpringText from "@/components/spring-text/SpringText";
+import { TypingTitle, TypingText } from "@/components/typing-text/Typing";
 import { FormattedMessage } from "react-intl";
 import { GithubIcon, LinkedinIcon } from "@/components/svgs";
 import Image, { StaticImageData } from "next/image";
@@ -97,14 +97,14 @@ const HomePage: FC = () => {
 								>
 									<FormattedMessage id="page.home.my__experience" />
 									&nbsp;
-									<SpringText />
+									<TypingTitle />
 								</motion.h1>
 								<motion.p
 									custom={3}
 									variants={animationText}
 									className={`${scss.text__z__index} ${scss.my__self}`}
 								>
-									<FormattedMessage id="page.home.my__self" />
+									<TypingText />
 								</motion.p>
 								<div className={`${scss.text__z__index} ${scss.my__icons}`}>
 									<motion.a
