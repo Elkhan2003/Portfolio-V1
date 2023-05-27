@@ -36,7 +36,7 @@ const AboutPage: FC = () => {
 								<FormattedMessage id="page.about.title_1" />
 							</h1>
 							<h2 className={`${scss.text__z__index}`}>
-								<FormattedMessage id="page.about.title_2" />
+								<FormattedMessage id="page.about.title_2" /> 📍
 							</h2>
 							<p className={`${scss.text__z__index}`}>
 								<FormattedMessage id="page.about.text" />
