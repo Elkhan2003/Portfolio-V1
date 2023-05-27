@@ -28,7 +28,7 @@ const HomePage: FC = () => {
 		visible: (custom: number) => ({
 			x: 0,
 			opacity: 1,
-			transition: { delay: custom * 0.3, else: "easyOut", duration: 0.5 }
+			transition: { delay: custom * 0.4, else: "easyOut", duration: 0.5 }
 		})
 	};
 
@@ -107,7 +107,7 @@ const HomePage: FC = () => {
 								</motion.p>
 								<div className={`${scss.text__z__index} ${scss.my__icons}`}>
 									<motion.a
-										custom={4}
+										custom={14}
 										variants={animationIcons}
 										className={scss.icon}
 										href="https://github.com/Elkhan2003"
@@ -117,7 +117,7 @@ const HomePage: FC = () => {
 										<LinkedinIcon />
 									</motion.a>
 									<motion.a
-										custom={6}
+										custom={16}
 										variants={animationIcons}
 										className={scss.icon}
 										href="https://github.com/Elkhan2003"
@@ -141,7 +141,7 @@ const HomePage: FC = () => {
 						<div className={scss.bottom}>
 							<div className={`${scss.my__skills}`}>
 								<motion.p
-									custom={1}
+									custom={5}
 									variants={animationText}
 									className={`${scss.text__z__index}`}
 								>
@@ -150,7 +150,7 @@ const HomePage: FC = () => {
 								<div className={scss.logos}>
 									{tech_icons.map((item, index) => (
 										<motion.div
-											custom={index + 1}
+											custom={index + 24}
 											variants={animationIcons}
 											key={index + 1}
 											className={`${scss.text__z__index} ${scss.icon}`}
