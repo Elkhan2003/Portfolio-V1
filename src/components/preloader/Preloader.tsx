@@ -10,8 +10,8 @@ const Preloader: FC<PreloaderType> = ({ className }) => {
 		<div className={className}>
 			<Dna
 				visible={true}
-				height="300"
-				width="300"
+				height="225"
+				width="225"
 				ariaLabel="dna-loading"
 				wrapperStyle={{}}
 				wrapperClass="dna-wrapper"

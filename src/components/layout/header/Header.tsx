@@ -293,20 +293,6 @@ const Header: FC<HeaderProps> = (props) => {
 										<ArrowUpRightIcon />
 									</a>
 								</div>
-
-								{/* ! timetable */}
-								{/*<div className={scss.timetable}>*/}
-								{/*	<div className={scss.icon__text}>*/}
-								{/*		<TimeIcon />*/}
-								{/*		<p className={scss.text}>*/}
-								{/*			<FormattedMessage id="page.header.timetable" />*/}
-								{/*		</p>*/}
-								{/*	</div>*/}
-								{/*	<div className={scss.icon__text}>*/}
-								{/*		<PhoneIcon />*/}
-								{/*		<p className={scss.text}>+996 990 38 50 56</p>*/}
-								{/*	</div>*/}
-								{/*</div>*/}
 							</div>
 
 							{/*<div className={scss.burger__button}>*/}
