@@ -79,7 +79,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 			</Head>
 			<div>
 				{loading ? (
-					<div className={font.className}>
+					<div className={`${font.className} ${scss.preloader__center}`}>
 						<Preloader className={scss.preloader} />
 					</div>
 				) : (
