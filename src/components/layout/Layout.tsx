@@ -7,6 +7,7 @@ import { useIntl } from "react-intl";
 import useScript_V2 from "@/components/layout/useScript_V2";
 
 import { Montserrat } from "next/font/google";
+import Preloader from "../preloader/Preloader";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -45,7 +46,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1500);
+		}, 1700);
 	}, []);
 
 	// useEffect(() => {
@@ -76,22 +77,28 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 				<link rel="icon" href="/code-icon.png" hrefLang="en" />
 				<link rel="icon" href="/code-icon.png" hrefLang="ru" />
 			</Head>
-			{loading ? (
-				<div className={font.className}>Loading...</div>
-			) : (
-				<div dir={dir}>
-					<canvas className={scss.canvas} id="canvas" />
-					<div className={`${scss.layout} ${font.className}`}>
-						<header>
-							<Header {...props} />
-						</header>
-						<main>{children}</main>
-						<footer>
-							<Footer />
-						</footer>
+			<div>
+				{loading ? (
+					<div className={font.className}>
+						<Preloader className={scss.preloader} />
 					</div>
-				</div>
-			)}
+				) : (
+					<>
+						<canvas className={scss.canvas} id="canvas" />
+						<div dir={dir}>
+							<div className={`${scss.layout} ${font.className}`}>
+								<header>
+									<Header {...props} />
+								</header>
+								<main>{children}</main>
+								<footer>
+									<Footer />
+								</footer>
+							</div>
+						</div>
+					</>
+				)}
+			</div>
 		</>
 	);
 };
