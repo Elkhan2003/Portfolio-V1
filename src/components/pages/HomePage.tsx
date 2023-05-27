@@ -72,7 +72,7 @@ const HomePage: FC = () => {
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: false }}
+				viewport={{ once: true }}
 				id="/"
 				className={scss.home__page}
 			>
