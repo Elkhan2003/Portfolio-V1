@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Tilt from "react-parallax-tilt";
 
 import { Montserrat } from "next/font/google";
+import ReactPlayer from "react-player";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -101,15 +102,24 @@ const ContactPage: FC = () => {
 			>
 				<div className="container">
 					<div className={`${scss.content}`}>
+						<div className={scss.form__title}>
+							<h1>
+								<FormattedMessage id="page.contact.title" />
+							</h1>
+							<h2>Let's work together📍</h2>
+						</div>
 						<div className={scss.form__content}>
-							<div className={scss.form__text}>
-								<h1>
-									<FormattedMessage id="page.contact.title" />
-								</h1>
-								<h2>
-									Let's work <br />
-									together!
-								</h2>
+							<div className={scss.animation__edge}>
+								<ReactPlayer
+									className={`${scss.text__z__index} ${scss.magic}`}
+									url="/video.webm"
+									playing={true}
+									muted={true}
+									loop={true}
+									controls={false}
+									width="100%"
+									height="100%"
+								/>
 							</div>
 
 							<Tilt
