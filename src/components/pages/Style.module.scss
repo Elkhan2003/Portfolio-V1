@@ -610,7 +610,7 @@
 
 // ! contact__page
 .contact__page {
-	padding: 60px 0 100px 0;
+	padding: 70px 0 100px 0;
 
 	@media (max-width: 500px) {
 		padding: 10px 0 50px 0;
@@ -669,7 +669,7 @@
 
 		// ! Animation edge
 		.animation__edge {
-			$animation__edge: 600px;
+			$animation__edge: 550px;
 			width: $animation__edge;
 			height: $animation__edge;
 			max-width: $animation__edge;
