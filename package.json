@@ -25,6 +25,7 @@
     "react-intl": "^6.4.2",
     "react-loader-spinner": "^5.3.4",
     "react-parallax-tilt": "^1.7.142",
+    "react-player": "^2.12.0",
     "react-scroll": "^1.8.9",
     "react-simple-typewriter": "^5.0.1",
     "react-toastify": "^9.1.3",
