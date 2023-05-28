@@ -45,7 +45,7 @@
 						font-size: 30px;
 					}
 					@media (max-width: 400px) {
-						font-size: 27px;
+						font-size: 25px;
 					}
 
 					span {
@@ -66,9 +66,9 @@
 					@media (max-width: 500px) {
 						font-size: 23px;
 					}
-					//@media (max-width: 400px) {
-					//	font-size: 21px;
-					//}
+					@media (max-width: 400px) {
+						font-size: 21px;
+					}
 
 					span {
 						//color: #b509bd !important;
