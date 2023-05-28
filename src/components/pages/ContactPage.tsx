@@ -109,18 +109,26 @@ const ContactPage: FC = () => {
 							<h2>Let's work together📍</h2>
 						</div>
 						<div className={scss.form__content}>
-							<div className={scss.animation__edge}>
-								<ReactPlayer
-									className={`${scss.text__z__index} ${scss.magic}`}
-									url="/video.webm"
-									playing={true}
-									muted={true}
-									loop={true}
-									controls={false}
-									width="100%"
-									height="100%"
-								/>
-							</div>
+							<Tilt
+								className={scss.tilt}
+								tiltEnable={isTiltActive}
+								tiltMaxAngleX={30}
+								tiltMaxAngleY={30}
+								transitionSpeed={1500}
+							>
+								<div className={scss.animation__edge}>
+									<ReactPlayer
+										className={`${scss.text__z__index} ${scss.magic}`}
+										url="/video.webm"
+										playing={true}
+										muted={true}
+										loop={true}
+										controls={false}
+										width="100%"
+										height="100%"
+									/>
+								</div>
+							</Tilt>
 
 							<Tilt
 								className={scss.tilt}

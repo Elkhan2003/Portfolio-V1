@@ -6,6 +6,7 @@ import { GithubIcon, LinkedinIcon } from "@/components/svgs";
 import Image, { StaticImageData } from "next/image";
 import * as TechIcons from "@/assets/tech-icons";
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const HomePage: FC = () => {
 	const tech_icons: StaticImageData[] = [
@@ -129,12 +130,14 @@ const HomePage: FC = () => {
 									</motion.a>
 								</div>
 							</div>
-							<div className={scss.right}>
-								<motion.div
-									custom={1}
-									variants={animationImage}
-									className={`${scss.shape}`}
-								></motion.div>
+							<div className={`${scss.text__z__index} ${scss.right}`}>
+								<Tilt tiltEnable={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+									<motion.div
+										custom={1}
+										variants={animationImage}
+										className={`${scss.shape}`}
+									></motion.div>
+								</Tilt>
 							</div>
 						</div>
 
