@@ -4,6 +4,10 @@ import Image from "next/image";
 import devx_magazine from "@/assets/projects/devx-magazine.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
 import my_diploma from "@/assets/projects/my-diploma.png";
+import mogo from "@/assets/projects/mogo.png";
+import devx_little from "@/assets/projects/devx-little.png";
+import ojjo from "@/assets/projects/ojjo.png";
+import css_animation from "@/assets/projects/css-animation.png";
 import todo_list from "@/assets/projects/todo-list.png";
 import { ArrowUpRightIcon, GithubIcon } from "@/components/svgs";
 import { FormattedMessage } from "react-intl";
@@ -28,14 +32,6 @@ const ProjectPage: FC = () => {
 			image: ortodont_group
 		},
 		{
-			title: "DevX Magazine 🪙",
-			description: <FormattedMessage id="page.project.text.devx_magazine" />,
-			stack: ["React", "SCSS", "Firebase"],
-			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
-			demoLink: "https://devx911.netlify.app/",
-			image: devx_magazine
-		},
-		{
 			title: "Diploma project 🪙",
 			description: <FormattedMessage id="page.project.text.diploma_project" />,
 			stack: ["React", "SCSS", "Bootstrap"],
@@ -44,12 +40,52 @@ const ProjectPage: FC = () => {
 			image: my_diploma
 		},
 		{
+			title: "DevX Magazine 🪙",
+			description: <FormattedMessage id="page.project.text.devx_magazine" />,
+			stack: ["React", "SCSS", "Firebase"],
+			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
+			demoLink: "https://devx911.netlify.app/",
+			image: devx_magazine
+		},
+		{
 			title: "ToDo List 🪙",
 			description: <FormattedMessage id="page.project.text.todo_list" />,
 			stack: ["React", "SCSS", "NodeJS", "MongoDB"],
 			codeLink: "https://github.com/Elkhan2003/MongoDB-ToDoList",
 			demoLink: "https://todo-mongo911.netlify.app/",
 			image: todo_list
+		},
+		{
+			title: "2021 | Mogo 🤫",
+			description: <FormattedMessage id="page.project.text.intern" />,
+			stack: ["HTML", "SCSS", "JavaScript"],
+			codeLink: "https://github.com/Elkhan2003/Mogo",
+			demoLink: "https://elkhan2003.github.io/Mogo/",
+			image: mogo
+		},
+		{
+			title: "2021 |  First little Site 🤫",
+			description: <FormattedMessage id="page.project.text.intern" />,
+			stack: ["HTML", "SCSS", "JavaScript"],
+			codeLink: "https://github.com/Elkhan2003/DevX",
+			demoLink: "https://elkhan2003.github.io/DevX/",
+			image: devx_little
+		},
+		{
+			title: "2021 |  OJJO 🤫",
+			description: <FormattedMessage id="page.project.text.intern" />,
+			stack: ["HTML", "SCSS"],
+			codeLink: "https://github.com/Elkhan2003/OJJO",
+			demoLink: "https://elkhan2003.github.io/OJJO/",
+			image: ojjo
+		},
+		{
+			title: "2021 |  CSS Animation 🤫",
+			description: <FormattedMessage id="page.project.text.intern" />,
+			stack: ["HTML", "CSS"],
+			codeLink: "https://github.com/Elkhan2003/css-animation",
+			demoLink: "https://elkhan2003.github.io/css-animation/",
+			image: css_animation
 		}
 	];
 
