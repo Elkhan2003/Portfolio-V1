@@ -39,7 +39,7 @@ const useScript_V2 = (url: string): void => {
 
 			function initialize() {
 				// ! Если ширина меньше 500px = выключаем анимацию
-				if (width < 500) {
+				if (window.innerWidth < 500) {
 					// Проверка на ширину экрана
 					return; // Если ширина экрана меньше 500 пикселей, прекратить выполнение
 				}
