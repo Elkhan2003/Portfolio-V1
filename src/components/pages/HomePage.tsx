@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import scss from "@/components/pages/Style.module.scss";
 import { TypingTitle, TypingText } from "@/components/typing-text/Typing";
 import { FormattedMessage } from "react-intl";
@@ -9,6 +9,14 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 const HomePage: FC = () => {
+	const [isTiltActive, setIsTiltActive] = useState<boolean>(true);
+
+	useEffect(() => {
+		if (window.innerWidth < 500) {
+			setIsTiltActive(false);
+		}
+	}, []);
+
 	const tech_icons: StaticImageData[] = [
 		TechIcons.html_icon,
 		TechIcons.css_icon,
@@ -131,7 +139,11 @@ const HomePage: FC = () => {
 								</div>
 							</div>
 							<div className={`${scss.text__z__index} ${scss.right}`}>
-								<Tilt tiltEnable={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+								<Tilt
+									tiltEnable={isTiltActive}
+									tiltMaxAngleX={10}
+									tiltMaxAngleY={10}
+								>
 									<motion.div
 										custom={1}
 										variants={animationImage}

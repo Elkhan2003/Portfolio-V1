@@ -33,8 +33,9 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] =
 		useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(true);
+	const [isCursor, setIsCursor] = useState<boolean>(true);
 
-	const props: any = {
+	const props: IsOpenProps = {
 		isOpen,
 		setIsOpen,
 		isOpenDropdown,
@@ -47,6 +48,12 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 		setTimeout(() => {
 			setLoading(false);
 		}, 1700);
+	}, []);
+
+	useEffect(() => {
+		if (window.innerWidth < 500) {
+			setIsCursor(false);
+		}
 	}, []);
 
 	// useEffect(() => {
@@ -84,7 +91,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 					</div>
 				) : (
 					<>
-						<canvas className={scss.canvas} id="canvas" />
+						{isCursor && <canvas className={scss.canvas} id="canvas" />}
 						<div dir={dir}>
 							<div className={`${scss.layout} ${font.className}`}>
 								<header>

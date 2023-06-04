@@ -21,21 +21,13 @@ interface FormData {
 
 const ContactPage: FC = () => {
 	const [sendButton, setSendButton] = useState<boolean>(false);
-	const [isTiltActive, setIsTiltActive] = useState<boolean>(false);
+	const [isTiltActive, setIsTiltActive] = useState<boolean>(true);
 
 	useEffect(() => {
-		const updateTiltActive = () => {
-			setIsTiltActive(window.innerWidth > 500);
-		};
-
-		updateTiltActive();
-
-		window.addEventListener("resize", updateTiltActive);
-
-		return () => {
-			window.removeEventListener("resize", updateTiltActive);
-		};
-	});
+		if (window.innerWidth < 500) {
+			setIsTiltActive(false);
+		}
+	}, []);
 
 	const {
 		register,
@@ -73,7 +65,7 @@ const ContactPage: FC = () => {
 				setSendButton(sendButton);
 				notify();
 				reset();
-			}, 1500);
+			}, 1000);
 		} catch (err) {
 			console.log(err);
 		}
