@@ -7,3 +7,7 @@ export { default as vite_icon } from "./vite-icon.png";
 export { default as next_icon } from "./next-js-icon.png";
 export { default as node_icon } from "./node-js-icon.png";
 export { default as scss_icon } from "./scss-icon.png";
+export { default as my_sql_icon } from "./my-sql-icon.png";
+export { default as express_icon } from "./express-icon.png";
+export { default as git_icon } from "./git-icon.png";
+export { default as docker_icon } from "./docker-icon.png";

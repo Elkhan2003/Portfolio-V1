@@ -25,8 +25,12 @@ const HomePage: FC = () => {
 		TechIcons.react_icon,
 		TechIcons.vite_icon,
 		TechIcons.next_icon,
+		TechIcons.scss_icon,
 		TechIcons.node_icon,
-		TechIcons.scss_icon
+		TechIcons.express_icon,
+		TechIcons.my_sql_icon,
+		TechIcons.docker_icon,
+		TechIcons.git_icon
 	];
 
 	const animationText = {
