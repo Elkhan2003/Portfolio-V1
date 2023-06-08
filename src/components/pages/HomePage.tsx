@@ -8,8 +8,14 @@ import * as TechIcons from "@/assets/tech-icons";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
+interface techIconsTypes {
+	icon: StaticImageData;
+	name: string;
+}
+
 const HomePage: FC = () => {
 	const [isTiltActive, setIsTiltActive] = useState<boolean>(true);
+	const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
 
 	useEffect(() => {
 		if (window.innerWidth < 500) {
@@ -17,20 +23,20 @@ const HomePage: FC = () => {
 		}
 	}, []);
 
-	const tech_icons: StaticImageData[] = [
-		TechIcons.html_icon,
-		TechIcons.css_icon,
-		TechIcons.java_script_icon,
-		TechIcons.type_script_icon,
-		TechIcons.react_icon,
-		TechIcons.vite_icon,
-		TechIcons.next_icon,
-		TechIcons.scss_icon,
-		TechIcons.node_icon,
-		TechIcons.express_icon,
-		TechIcons.my_sql_icon,
-		TechIcons.docker_icon,
-		TechIcons.git_icon
+	const tech_icons: techIconsTypes[] = [
+		{ icon: TechIcons.html_icon, name: "HTML" },
+		{ icon: TechIcons.css_icon, name: "CSS" },
+		{ icon: TechIcons.java_script_icon, name: "JavaScript" },
+		{ icon: TechIcons.type_script_icon, name: "TypeScript" },
+		{ icon: TechIcons.react_icon, name: "React" },
+		{ icon: TechIcons.vite_icon, name: "Vite" },
+		{ icon: TechIcons.next_icon, name: "Next.js" },
+		{ icon: TechIcons.scss_icon, name: "SCSS" },
+		{ icon: TechIcons.node_icon, name: "Node.js" },
+		{ icon: TechIcons.express_icon, name: "Express" },
+		{ icon: TechIcons.my_sql_icon, name: "MySQL" },
+		{ icon: TechIcons.docker_icon, name: "Docker" },
+		{ icon: TechIcons.git_icon, name: "Git" }
 	];
 
 	const animationText = {
@@ -174,15 +180,20 @@ const HomePage: FC = () => {
 											variants={animationIcons}
 											key={index + 1}
 											className={`${scss.text__z__index} ${scss.icon}`}
+											onMouseEnter={() => setActiveTooltip(item.name)}
+											onMouseLeave={() => setActiveTooltip(null)}
 										>
 											<Image
 												priority={true}
 												quality={25}
 												loading="eager"
 												className={scss.icon}
-												src={item}
-												alt={"icon"}
+												src={item.icon}
+												alt={item.name}
 											/>
+											{activeTooltip === item.name && (
+												<div className={scss.tech__title}>{item.name}</div>
+											)}
 										</motion.div>
 									))}
 								</div>

@@ -208,6 +208,8 @@
 					}
 
 					.icon {
+						position: relative;
+
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -230,6 +232,15 @@
 							background: transparent;
 							border-radius: 0;
 							box-shadow: none;
+						}
+
+						.tech__title {
+							position: absolute;
+							left: 50%;
+							bottom: -25px;
+							transform: translateX(-50%);
+
+							text-align: center;
 						}
 					}
 				}
