@@ -181,12 +181,14 @@
 				}
 
 				p {
+					font-size: 24px;
 					font-weight: 600;
 					border-right: 2px solid #b509bd;
 					margin-right: 3rem;
 					padding-right: 1rem;
 
 					@media (max-width: 1150px) {
+						font-size: 16px;
 						border-bottom: 2px solid #b509bd;
 						border-right: none;
 						margin-bottom: 1.5rem;
@@ -201,7 +203,9 @@
 					gap: 15px;
 					display: flex;
 					flex-wrap: wrap;
+					justify-content: center;
 					align-items: center;
+					max-width: 1000px;
 
 					@media (max-width: 850px) {
 						justify-content: center;
