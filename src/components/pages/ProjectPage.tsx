@@ -3,6 +3,7 @@ import scss from "./Style.module.scss";
 import Image from "next/image";
 import devx_magazine from "@/assets/projects/devx-magazine.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
+import amo_crm from "@/assets/projects/amo-crm.png";
 import my_diploma from "@/assets/projects/my-diploma.png";
 import mogo from "@/assets/projects/mogo.png";
 import devx_little from "@/assets/projects/devx-little.png";
@@ -32,12 +33,12 @@ const ProjectPage: FC = () => {
 			image: ortodont_group
 		},
 		{
-			title: "Diploma project 🪙",
-			description: <FormattedMessage id="page.project.text.diploma_project" />,
-			stack: ["React", "SCSS", "Bootstrap"],
-			codeLink: "https://github.com/Elkhan2003/Elcho911-Diploma",
-			demoLink: "https://elcho911-diploma.netlify.app/",
-			image: my_diploma
+			title: "AmoCRM 🪙",
+			description: <FormattedMessage id="page.project.text.amo_crm" />,
+			stack: ["Fastify", "Supabase", "Prisma", "AmoCRM"],
+			codeLink: "https://github.com/Elkhan2003/AmoCRM",
+			demoLink: "https://fair-rose-swallow-tutu.cyclic.cloud/",
+			image: amo_crm
 		},
 		{
 			title: "DevX Magazine 🪙",
@@ -46,6 +47,14 @@ const ProjectPage: FC = () => {
 			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
 			demoLink: "https://devx911.netlify.app/",
 			image: devx_magazine
+		},
+		{
+			title: "Diploma project 🪙",
+			description: <FormattedMessage id="page.project.text.diploma_project" />,
+			stack: ["React", "SCSS", "Bootstrap"],
+			codeLink: "https://github.com/Elkhan2003/Elcho911-Diploma",
+			demoLink: "https://elcho911-diploma.netlify.app/",
+			image: my_diploma
 		},
 		{
 			title: "ToDo List 🪙",

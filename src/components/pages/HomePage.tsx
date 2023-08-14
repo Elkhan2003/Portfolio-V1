@@ -34,7 +34,11 @@ const HomePage: FC = () => {
 		{ icon: TechIcons.scss_icon, name: "SCSS" },
 		{ icon: TechIcons.node_icon, name: "Node.js" },
 		{ icon: TechIcons.express_icon, name: "Express" },
+		{ icon: TechIcons.fastify_icon, name: "Fastify" },
+		{ icon: TechIcons.prisma_icon, name: "Prisma" },
+		{ icon: TechIcons.supabase_icon, name: "Supabase" },
 		{ icon: TechIcons.my_sql_icon, name: "MySQL" },
+		{ icon: TechIcons.postgresql_icon, name: "PostgreSQL" },
 		{ icon: TechIcons.docker_icon, name: "Docker" },
 		{ icon: TechIcons.git_icon, name: "Git" }
 	];
@@ -130,7 +134,7 @@ const HomePage: FC = () => {
 										custom={11}
 										variants={animationIcons}
 										className={scss.icon}
-										href="https://github.com/Elkhan2003"
+										href="https://www.linkedin.com/in/elcho"
 										target="_blank"
 										aria-label="Linkedin"
 									>
