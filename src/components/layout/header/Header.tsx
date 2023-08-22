@@ -286,7 +286,7 @@ const Header: FC<HeaderProps> = (props) => {
 								<div className={scss.resume}>
 									<a
 										className={scss.button}
-										href="/resume-elcho911.pdf"
+										href="/EN-Resume.pdf"
 										target="_blank"
 									>
 										Resume

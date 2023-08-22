@@ -2,21 +2,8 @@ import { useEffect } from "react";
 
 const useScript_V1 = (url: string): void => {
 	useEffect(() => {
-		
-		const canvas = document.getElementById(
-			"canvas"
-		) as HTMLCanvasElement | null;
-		if (!canvas) {
-			console.error("Canvas element with ID 'canvas' not found.");
-			return;
-		}
-
+		const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 		const ctx = canvas.getContext("2d")!;
-		if (!ctx) {
-			console.error("2D context not available.");
-			return;
-		}
-
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
 		let spots: Particle[] = [];
@@ -89,7 +76,6 @@ const useScript_V1 = (url: string): void => {
 		}
 
 		function animate() {
-			if (!canvas) return;
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			handleParticle();
 			hue++;
