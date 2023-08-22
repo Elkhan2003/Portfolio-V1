@@ -45,6 +45,9 @@ const Header: FC<HeaderProps> = (props) => {
 		};
 	}, []);
 
+	// ! Resume
+	const resume = "/EN-Resume.pdf";
+
 	// ! Link Scroll
 	const offsetScroll = -30;
 	const durationScroll = 500;
@@ -188,11 +191,7 @@ const Header: FC<HeaderProps> = (props) => {
 
 									{/* ! resume */}
 									<div className={scss.resume}>
-										<a
-											className={scss.button}
-											href="/EN-Resume.pdf"
-											target="_blank"
-										>
+										<a className={scss.button} href={resume} target="_blank">
 											Resume
 											<ArrowUpRightIcon />
 										</a>
@@ -284,11 +283,7 @@ const Header: FC<HeaderProps> = (props) => {
 
 								{/* ! resume */}
 								<div className={scss.resume}>
-									<a
-										className={scss.button}
-										href="/EN-Resume.pdf"
-										target="_blank"
-									>
+									<a className={scss.button} href={resume} target="_blank">
 										Resume
 										<ArrowUpRightIcon />
 									</a>
