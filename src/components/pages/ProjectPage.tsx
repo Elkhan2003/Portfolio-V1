@@ -37,7 +37,7 @@ const ProjectPage: FC = () => {
 			description: <FormattedMessage id="page.project.text.amo_crm" />,
 			stack: ["Fastify", "Supabase", "Prisma", "AmoCRM"],
 			codeLink: "https://github.com/Elkhan2003/AmoCRM",
-			demoLink: "https://fair-rose-swallow-tutu.cyclic.cloud/",
+			demoLink: "https://rose-uninterested-crane.cyclic.cloud/",
 			image: amo_crm
 		},
 		{
