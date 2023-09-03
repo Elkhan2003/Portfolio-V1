@@ -27,7 +27,7 @@ const ProjectPage: FC = () => {
 		{
 			title: "Ortodont Group 🪙",
 			description: <FormattedMessage id="page.project.text.ortodont_group" />,
-			stack: ["NextJS", "TypeScript", "SCSS"],
+			stack: ["NextJS", "TypeScript", "SCSS", "RestAPI"],
 			codeLink: "https://github.com/Elkhan2003/Next-Dentist",
 			demoLink: "https://next-dentist911.vercel.app/",
 			image: ortodont_group
