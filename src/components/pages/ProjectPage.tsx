@@ -35,7 +35,7 @@ const ProjectPage: FC = () => {
 		{
 			title: "AmoCRM 🪙",
 			description: <FormattedMessage id="page.project.text.amo_crm" />,
-			stack: ["Fastify", "Supabase", "Prisma", "AmoCRM"],
+			stack: ["RestAPI", "Fastify", "Supabase", "Prisma", "AmoCRM"],
 			codeLink: "https://github.com/Elkhan2003/AmoCRM",
 			demoLink: "https://rose-uninterested-crane.cyclic.cloud/",
 			image: amo_crm
@@ -43,7 +43,7 @@ const ProjectPage: FC = () => {
 		{
 			title: "DevX Magazine 🪙",
 			description: <FormattedMessage id="page.project.text.devx_magazine" />,
-			stack: ["React", "SCSS", "Firebase"],
+			stack: ["RestAPI", "React", "SCSS", "Firebase"],
 			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
 			demoLink: "https://devx911.netlify.app/",
 			image: devx_magazine
