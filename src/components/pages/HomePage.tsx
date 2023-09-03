@@ -30,6 +30,7 @@ const HomePage: FC = () => {
 		{ icon: TechIcons.java_script_icon, name: "JavaScript" },
 		{ icon: TechIcons.type_script_icon, name: "TypeScript" },
 		{ icon: TechIcons.react_icon, name: "React" },
+		{ icon: TechIcons.redux_icon, name: "Redux" },
 		{ icon: TechIcons.vite_icon, name: "Vite" },
 		{ icon: TechIcons.next_icon, name: "Next.js" },
 		{ icon: TechIcons.scss_icon, name: "SCSS" },
