@@ -65,7 +65,7 @@ const ProjectPage: FC = () => {
 			image: todo_list
 		},
 		{
-			title: "2021 | Mogo 🤫",
+			title: "2020 | Mogo 🤫",
 			description: <FormattedMessage id="page.project.text.intern" />,
 			stack: ["HTML", "SCSS", "JavaScript"],
 			codeLink: "https://github.com/Elkhan2003/Mogo",
@@ -73,7 +73,7 @@ const ProjectPage: FC = () => {
 			image: mogo
 		},
 		{
-			title: "2021 |  First little Site 🤫",
+			title: "2020 |  First little Site 🤫",
 			description: <FormattedMessage id="page.project.text.intern" />,
 			stack: ["HTML", "SCSS", "JavaScript"],
 			codeLink: "https://github.com/Elkhan2003/DevX",
@@ -81,7 +81,7 @@ const ProjectPage: FC = () => {
 			image: devx_little
 		},
 		{
-			title: "2021 |  OJJO 🤫",
+			title: "2020 |  OJJO 🤫",
 			description: <FormattedMessage id="page.project.text.intern" />,
 			stack: ["HTML", "SCSS"],
 			codeLink: "https://github.com/Elkhan2003/OJJO",
@@ -89,7 +89,7 @@ const ProjectPage: FC = () => {
 			image: ojjo
 		},
 		{
-			title: "2021 |  CSS Animation 🤫",
+			title: "2020 |  CSS Animation 🤫",
 			description: <FormattedMessage id="page.project.text.intern" />,
 			stack: ["HTML", "CSS"],
 			codeLink: "https://github.com/Elkhan2003/css-animation",

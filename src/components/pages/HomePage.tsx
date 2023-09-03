@@ -24,6 +24,7 @@ const HomePage: FC = () => {
 	}, []);
 
 	const tech_icons: techIconsTypes[] = [
+		{ icon: TechIcons.linux_icon, name: "Linux" },
 		{ icon: TechIcons.html_icon, name: "HTML" },
 		{ icon: TechIcons.css_icon, name: "CSS" },
 		{ icon: TechIcons.java_script_icon, name: "JavaScript" },

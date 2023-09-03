@@ -1,3 +1,4 @@
+export { default as linux_icon } from "./linux-icon.png";
 export { default as html_icon } from "./html-icon.png";
 export { default as css_icon } from "./css-icon.png";
 export { default as java_script_icon } from "./java-script-icon.png";
