@@ -4,6 +4,7 @@ import Image from "next/image";
 import devx_magazine from "@/assets/projects/devx-magazine.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
 import amo_crm from "@/assets/projects/amo-crm.png";
+import devx_iksu from "@/assets/projects/devx-iksu.png";
 import my_diploma from "@/assets/projects/my-diploma.png";
 import mogo from "@/assets/projects/mogo.png";
 import devx_little from "@/assets/projects/devx-little.png";
@@ -47,6 +48,14 @@ const ProjectPage: FC = () => {
 			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
 			demoLink: "https://devx911.netlify.app/",
 			image: devx_magazine
+		},
+		{
+			title: "Alpha version | DevX IKSU 🪙",
+			description: <FormattedMessage id="page.project.text.devx_iksu" />,
+			stack: ["React", "TypeScript", "SCSS", "Firebase"],
+			codeLink: "https://github.com/DevX-Karakol-911/DevX-Karakol-beta",
+			demoLink: "https://devx-kg.netlify.app/",
+			image: devx_iksu
 		},
 		{
 			title: "Diploma project 🪙",
