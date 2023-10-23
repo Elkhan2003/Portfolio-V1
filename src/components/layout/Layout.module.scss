@@ -11,17 +11,6 @@
 	}
 }
 
-.preloader__center {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
-	.preloader {
-		transform: rotate(-50deg);
-	}
-}
-
 .canvas {
 	position: fixed;
 	z-index: 1;
