@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 const useScript_V1 = (url: string): void => {
 	useEffect(() => {
-		
 		const canvas = document.getElementById(
 			"canvas"
 		) as HTMLCanvasElement | null;

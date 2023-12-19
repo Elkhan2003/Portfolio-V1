@@ -13,7 +13,9 @@
 		background: var(--header-scroll);
 
 		// transition: padding 0.5s, background 0.2s;
-		transition: padding 0.5s, background 0.2s;
+		transition:
+			padding 0.5s,
+			background 0.2s;
 
 		@media (max-width: 767px) {
 			padding: 10px 0;
@@ -193,7 +195,10 @@
 
 				border-radius: 10px;
 				transform: scale(0.8) translateZ(0);
-				transition: opacity 0.2s, transform 0.3s, visibility 0s;
+				transition:
+					opacity 0.2s,
+					transform 0.3s,
+					visibility 0s;
 
 				cursor: default;
 
