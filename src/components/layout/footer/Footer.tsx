@@ -20,7 +20,7 @@ const Footer: FC = () => {
 						<div className={`${scss.my__icons}`}>
 							<a
 								className={scss.icon}
-								href="https://github.com/Elkhan2003"
+								href="https://www.linkedin.com/in/elcho/"
 								target="_blank"
 								aria-label="Linkedin"
 							>
