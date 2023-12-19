@@ -5,6 +5,7 @@ import eco_movie from "@/assets/projects/eco-movie.png";
 import wedevx_selenium from "@/assets/projects/wedevx-selenium.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
 import amo_crm from "@/assets/projects/amo-crm.png";
+import telegram_sms_bot from "@/assets/projects/telegram-sms-bot.png";
 import devx_magazine from "@/assets/projects/devx-magazine.png";
 import devx_iksu from "@/assets/projects/devx-iksu.png";
 import my_diploma from "@/assets/projects/my-diploma.png";
@@ -52,23 +53,39 @@ const ProjectPage: FC = () => {
 			image: ortodont_group
 		},
 		{
-			title: "AmoCRM 🪙",
+			title: "AmoCRM 🐬",
 			description: <FormattedMessage id="page.project.text.amo_crm" />,
-			stack: ["RestAPI", "Fastify", "Supabase", "Prisma", "AmoCRM"],
+			stack: [
+				"Fastify",
+				"TypeScript",
+				"Supabase",
+				"Prisma",
+				"AmoCRM",
+				"RestAPI"
+			],
 			codeLink: "https://github.com/Elkhan2003/AmoCRM",
 			demoLink: "https://rose-uninterested-crane.cyclic.cloud/",
 			image: amo_crm
 		},
 		{
-			title: "WeDevX Magazine 🪙",
+			title: "Telegram SMS bot 🐬",
+			description: <FormattedMessage id="page.project.text.telegram_sms_bot" />,
+			stack: ["Express", "TypeScript", "TelegramBot", "RestAPI"],
+			codeLink: "https://github.com/Elkhan2003/telegram-sms-bot",
+			demoLink:
+				"https://github.com/Elkhan2003/telegram-sms-bot/blob/main/README.md",
+			image: telegram_sms_bot
+		},
+		{
+			title: "WeDevX Magazine 🐬",
 			description: <FormattedMessage id="page.project.text.devx_magazine" />,
-			stack: ["RestAPI", "React", "SCSS", "Firebase"],
+			stack: ["React", "SCSS", "Firebase", "RestAPI"],
 			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
 			demoLink: "https://devx911.netlify.app/",
 			image: devx_magazine
 		},
 		{
-			title: "Alpha version | DevX IKSU 🪙",
+			title: "Alpha version | DevX IKSU 🐬",
 			description: <FormattedMessage id="page.project.text.devx_iksu" />,
 			stack: ["React", "TypeScript", "SCSS", "Firebase"],
 			codeLink: "https://github.com/DevX-Karakol-911/DevX-Karakol-beta",
