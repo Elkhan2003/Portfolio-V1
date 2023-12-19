@@ -60,7 +60,7 @@ const ProjectPage: FC = () => {
 			image: amo_crm
 		},
 		{
-			title: "DevX Magazine 🪙",
+			title: "WeDevX Magazine 🪙",
 			description: <FormattedMessage id="page.project.text.devx_magazine" />,
 			stack: ["RestAPI", "React", "SCSS", "Firebase"],
 			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
