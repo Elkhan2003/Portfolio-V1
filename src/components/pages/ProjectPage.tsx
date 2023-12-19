@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Image from "next/image";
-import devx_magazine from "@/assets/projects/devx-magazine.png";
+import eco_movie from "@/assets/projects/eco-movie.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
 import amo_crm from "@/assets/projects/amo-crm.png";
+import devx_magazine from "@/assets/projects/devx-magazine.png";
 import devx_iksu from "@/assets/projects/devx-iksu.png";
 import my_diploma from "@/assets/projects/my-diploma.png";
 import mogo from "@/assets/projects/mogo.png";
@@ -25,6 +26,14 @@ interface projectsTypes {
 
 const ProjectPage: FC = () => {
 	const projects: projectsTypes[] = [
+		{
+			title: "Eco Movie 🐬",
+			description: <FormattedMessage id="page.project.text.eco_movie" />,
+			stack: ["NextJS", "TypeScript", "ReduxToolkit", "RestAPI"],
+			codeLink: "https://github.com/Elkhan2003/eco-movie",
+			demoLink: "https://eco-movie.vercel.app/",
+			image: eco_movie
+		},
 		{
 			title: "Ortodont Group 🪙",
 			description: <FormattedMessage id="page.project.text.ortodont_group" />,
