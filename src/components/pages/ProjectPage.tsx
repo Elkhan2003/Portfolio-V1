@@ -74,14 +74,14 @@ const ProjectPage: FC = () => {
 			demoLink: "https://elcho911-diploma.netlify.app/",
 			image: my_diploma
 		},
-		{
-			title: "ToDo List 🪙",
-			description: <FormattedMessage id="page.project.text.todo_list" />,
-			stack: ["React", "SCSS", "NodeJS", "MongoDB"],
-			codeLink: "https://github.com/Elkhan2003/MongoDB-ToDoList",
-			demoLink: "https://todo-mongo911.netlify.app/",
-			image: todo_list
-		},
+		// {
+		// 	title: "ToDo List 🪙",
+		// 	description: <FormattedMessage id="page.project.text.todo_list" />,
+		// 	stack: ["React", "SCSS", "NodeJS", "MongoDB"],
+		// 	codeLink: "https://github.com/Elkhan2003/MongoDB-ToDoList",
+		// 	demoLink: "https://todo-mongo911.netlify.app/",
+		// 	image: todo_list
+		// },
 		{
 			title: "2020 | Mogo 🤫",
 			description: <FormattedMessage id="page.project.text.intern" />,
@@ -98,14 +98,14 @@ const ProjectPage: FC = () => {
 			demoLink: "https://elkhan2003.github.io/DevX/",
 			image: devx_little
 		},
-		{
-			title: "2020 |  OJJO 🤫",
-			description: <FormattedMessage id="page.project.text.intern" />,
-			stack: ["HTML", "SCSS"],
-			codeLink: "https://github.com/Elkhan2003/OJJO",
-			demoLink: "https://elkhan2003.github.io/OJJO/",
-			image: ojjo
-		},
+		// {
+		// 	title: "2020 |  OJJO 🤫",
+		// 	description: <FormattedMessage id="page.project.text.intern" />,
+		// 	stack: ["HTML", "SCSS"],
+		// 	codeLink: "https://github.com/Elkhan2003/OJJO",
+		// 	demoLink: "https://elkhan2003.github.io/OJJO/",
+		// 	image: ojjo
+		// },
 		{
 			title: "2020 |  CSS Animation 🤫",
 			description: <FormattedMessage id="page.project.text.intern" />,
