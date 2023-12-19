@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Image from "next/image";
 import eco_movie from "@/assets/projects/eco-movie.png";
+import wedevx_selenium from "@/assets/projects/wedevx-selenium.png";
 import ortodont_group from "@/assets/projects/ortodont-group.png";
 import amo_crm from "@/assets/projects/amo-crm.png";
 import devx_magazine from "@/assets/projects/devx-magazine.png";
@@ -33,6 +34,14 @@ const ProjectPage: FC = () => {
 			codeLink: "https://github.com/Elkhan2003/eco-movie",
 			demoLink: "https://eco-movie.vercel.app/",
 			image: eco_movie
+		},
+		{
+			title: "WeDevX Selenium 🐬",
+			description: <FormattedMessage id="page.project.text.wedevx_selenium" />,
+			stack: ["NextJS", "TypeScript", "Material UI"],
+			codeLink: "https://github.com/Elkhan2003/Selenium",
+			demoLink: "https://demo-project.wedevx.co/",
+			image: wedevx_selenium
 		},
 		{
 			title: "Ortodont Group 🪙",
