@@ -33,7 +33,7 @@ const ProjectPage: FC = () => {
 			description: <FormattedMessage id="page.project.text.eco_movie" />,
 			stack: ["NextJS", "TypeScript", "ReduxToolkit", "RestAPI"],
 			codeLink: "https://github.com/Elkhan2003/eco-movie",
-			demoLink: "https://eco-movie.vercel.app/",
+			demoLink: "https://ecomovie.life/",
 			image: eco_movie
 		},
 		{
