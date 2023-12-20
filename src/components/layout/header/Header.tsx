@@ -46,7 +46,7 @@ const Header: FC<HeaderProps> = (props) => {
 	}, []);
 
 	// ! Resume
-	const resume = "/Resume.pdf";
+	const resume = "/Resume-V2.pdf";
 
 	// ! Link Scroll
 	const offsetScroll = -30;
