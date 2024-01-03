@@ -11,6 +11,7 @@ export { default as vite_icon } from "./vite-icon.png";
 export { default as next_icon } from "./next-js-icon.png";
 export { default as node_icon } from "./node-js-icon.png";
 export { default as fastify_icon } from "./fastify.png";
+export { default as nest_icon } from "./nest-js-icon.png";
 export { default as prisma_icon } from "./prisma.png";
 export { default as supabase_icon } from "./supabase.png";
 export { default as scss_icon } from "./scss-icon.png";

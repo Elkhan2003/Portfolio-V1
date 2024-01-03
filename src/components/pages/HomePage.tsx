@@ -39,6 +39,7 @@ const HomePage: FC = () => {
 		{ icon: TechIcons.node_icon, name: "Node.js" },
 		{ icon: TechIcons.express_icon, name: "Express" },
 		{ icon: TechIcons.fastify_icon, name: "Fastify" },
+		{ icon: TechIcons.nest_icon, name: "Nest.js" },
 		{ icon: TechIcons.prisma_icon, name: "Prisma" },
 		{ icon: TechIcons.supabase_icon, name: "Supabase" },
 		{ icon: TechIcons.my_sql_icon, name: "MySQL" },
