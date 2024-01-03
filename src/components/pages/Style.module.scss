@@ -126,7 +126,7 @@
 
 				// ! Photo Profile
 				.shape {
-					background: url("../../assets/DevX-Elcho911.webp") no-repeat
+					background: url('../../assets/DevX-Elcho911.webp') no-repeat
 						center/cover;
 					animation: morph 8s ease-in-out infinite;
 					border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -344,12 +344,12 @@
 				}
 
 				&:after {
-					content: "";
+					content: '';
 					position: absolute;
 					right: 65px;
 					bottom: 75px;
 
-					background: url("../../assets/working-emoji.png") no-repeat
+					background: url('../../assets/working-emoji.png') no-repeat
 						center/cover;
 					width: 70px;
 					height: 70px;
@@ -910,7 +910,7 @@
 						overflow: hidden;
 
 						&::before {
-							content: "";
+							content: '';
 							position: absolute;
 							top: 0;
 							left: -50%;
@@ -925,7 +925,7 @@
 
 			.button__container .button:before,
 			.button__container .button:after {
-				content: "";
+				content: '';
 				position: absolute;
 				inset: 0;
 				transition: 0.5s;

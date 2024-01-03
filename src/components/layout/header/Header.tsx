@@ -1,15 +1,15 @@
-import React, { FC, useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Link as ScrollLink } from "react-scroll";
-import { FormattedMessage } from "react-intl";
-import scss from "./Header.module.scss";
-import { LangIcon, ArrowIcon, ArrowUpRightIcon } from "@/components/svgs";
-import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
+import React, { FC, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
+import { FormattedMessage } from 'react-intl';
+import scss from './Header.module.scss';
+import { LangIcon, ArrowIcon, ArrowUpRightIcon } from '@/components/svgs';
+import AnimatedNumbers from '@/components/framer-motion/AnimatedNumbers';
 
 // PermanentMarker
 
-import { IsOpenProps } from "@/components/layout/Layout";
+import { IsOpenProps } from '@/components/layout/Layout';
 
 interface HeaderProps extends IsOpenProps {}
 
@@ -38,15 +38,15 @@ const Header: FC<HeaderProps> = (props) => {
 		};
 
 		changeBackground();
-		window.addEventListener("scroll", changeBackground);
+		window.addEventListener('scroll', changeBackground);
 
 		return () => {
-			window.removeEventListener("scroll", changeBackground);
+			window.removeEventListener('scroll', changeBackground);
 		};
 	}, []);
 
 	// ! Resume
-	const resume = "/Resume.pdf";
+	const resume = '/Resume.pdf';
 
 	// ! Link Scroll
 	const offsetScroll = -30;
@@ -55,8 +55,8 @@ const Header: FC<HeaderProps> = (props) => {
 	const links: linksProps[] = [
 		{
 			label: <FormattedMessage id="page.header.home" />,
-			to: "/",
-			href: "#home",
+			to: '/',
+			href: '#home',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -64,8 +64,8 @@ const Header: FC<HeaderProps> = (props) => {
 		},
 		{
 			label: <FormattedMessage id="page.header.about" />,
-			to: "about",
-			href: "#about",
+			to: 'about',
+			href: '#about',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -73,8 +73,8 @@ const Header: FC<HeaderProps> = (props) => {
 		},
 		{
 			label: <FormattedMessage id="page.header.project" />,
-			to: "project",
-			href: "#project",
+			to: 'project',
+			href: '#project',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,
@@ -82,8 +82,8 @@ const Header: FC<HeaderProps> = (props) => {
 		},
 		{
 			label: <FormattedMessage id="page.header.contact" />,
-			to: "contact",
-			href: "#contact",
+			to: 'contact',
+			href: '#contact',
 			spy: true,
 			smooth: true,
 			offset: offsetScroll,

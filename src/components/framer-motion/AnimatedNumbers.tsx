@@ -1,5 +1,5 @@
-import React, { FC, useEffect, useRef } from "react";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
+import React, { FC, useEffect, useRef } from 'react';
+import { useInView, useMotionValue, useSpring } from 'framer-motion';
 
 interface AnimatedNumbersProps {
 	value: number;
@@ -19,7 +19,7 @@ const AnimatedNumbers: FC<AnimatedNumbersProps> = ({ value }) => {
 	}, [isView, value, motionValue]);
 
 	useEffect(() => {
-		springValue.on("change", (latest: any): void => {
+		springValue.on('change', (latest: any): void => {
 			// console.log(latest);
 			if (ref.current && latest.toFixed(0) <= value) {
 				ref.current.textContent = latest.toFixed(0);

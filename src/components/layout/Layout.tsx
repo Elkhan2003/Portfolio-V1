@@ -1,15 +1,15 @@
-import Head from "next/head";
-import React, { FC, ReactNode, useEffect, useState } from "react";
-import scss from "./Layout.module.scss";
-import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footer/Footer";
-import { useIntl } from "react-intl";
-import useScript_V2 from "@/components/layout/useScript_V2";
+import Head from 'next/head';
+import React, { FC, ReactNode, useEffect, useState } from 'react';
+import scss from './Layout.module.scss';
+import Header from '@/components/layout/header/Header';
+import Footer from '@/components/layout/footer/Footer';
+import { useIntl } from 'react-intl';
+import useScript_V2 from '@/components/layout/useScript_V2';
 
-import { Montserrat } from "next/font/google";
-import Preloader from "../preloader/Preloader";
+import { Montserrat } from 'next/font/google';
+import Preloader from '../preloader/Preloader';
 
-const font = Montserrat({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ['latin'] });
 
 interface LayoutProps {
 	children: ReactNode;
@@ -63,12 +63,12 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	// }, []);
 
 	const intl: any = useIntl();
-	const title: any = intl.formatMessage({ id: "page.head.home.title" });
+	const title: any = intl.formatMessage({ id: 'page.head.home.title' });
 	const description: any = intl.formatMessage({
-		id: "page.head.meta.description"
+		id: 'page.head.meta.description'
 	});
 	const keywords: any = intl.formatMessage({
-		id: "page.head.meta.keywords"
+		id: 'page.head.meta.keywords'
 	});
 
 	return (

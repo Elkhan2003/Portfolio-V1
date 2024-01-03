@@ -1,12 +1,12 @@
-import React, { FC, useEffect, useState } from "react";
-import scss from "@/components/pages/Style.module.scss";
-import { TypingTitle, TypingText } from "@/components/typing-text/Typing";
-import { FormattedMessage } from "react-intl";
-import { GithubIcon, LinkedinIcon } from "@/components/svgs";
-import Image, { StaticImageData } from "next/image";
-import * as TechIcons from "@/assets/tech-icons";
-import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
+import React, { FC, useEffect, useState } from 'react';
+import scss from '@/components/pages/Style.module.scss';
+import { TypingTitle, TypingText } from '@/components/typing-text/Typing';
+import { FormattedMessage } from 'react-intl';
+import { GithubIcon, LinkedinIcon } from '@/components/svgs';
+import Image, { StaticImageData } from 'next/image';
+import * as TechIcons from '@/assets/tech-icons';
+import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 interface techIconsTypes {
 	icon: StaticImageData;
@@ -24,28 +24,28 @@ const HomePage: FC = () => {
 	}, []);
 
 	const tech_icons: techIconsTypes[] = [
-		{ icon: TechIcons.mac_os_icon, name: "MacOS" },
-		{ icon: TechIcons.linux_icon, name: "Linux" },
-		{ icon: TechIcons.windows_icon, name: "Windows" },
-		{ icon: TechIcons.html_icon, name: "HTML" },
-		{ icon: TechIcons.css_icon, name: "CSS" },
-		{ icon: TechIcons.java_script_icon, name: "JavaScript" },
-		{ icon: TechIcons.type_script_icon, name: "TypeScript" },
-		{ icon: TechIcons.react_icon, name: "React" },
-		{ icon: TechIcons.redux_icon, name: "Redux" },
-		{ icon: TechIcons.vite_icon, name: "Vite" },
-		{ icon: TechIcons.next_icon, name: "Next.js" },
-		{ icon: TechIcons.scss_icon, name: "SCSS" },
-		{ icon: TechIcons.node_icon, name: "Node.js" },
-		{ icon: TechIcons.express_icon, name: "Express" },
-		{ icon: TechIcons.fastify_icon, name: "Fastify" },
-		{ icon: TechIcons.nest_icon, name: "Nest.js" },
-		{ icon: TechIcons.prisma_icon, name: "Prisma" },
-		{ icon: TechIcons.supabase_icon, name: "Supabase" },
-		{ icon: TechIcons.my_sql_icon, name: "MySQL" },
-		{ icon: TechIcons.postgresql_icon, name: "PostgreSQL" },
-		{ icon: TechIcons.docker_icon, name: "Docker" },
-		{ icon: TechIcons.git_icon, name: "Git" }
+		{ icon: TechIcons.mac_os_icon, name: 'MacOS' },
+		{ icon: TechIcons.linux_icon, name: 'Linux' },
+		{ icon: TechIcons.windows_icon, name: 'Windows' },
+		{ icon: TechIcons.html_icon, name: 'HTML' },
+		{ icon: TechIcons.css_icon, name: 'CSS' },
+		{ icon: TechIcons.java_script_icon, name: 'JavaScript' },
+		{ icon: TechIcons.type_script_icon, name: 'TypeScript' },
+		{ icon: TechIcons.react_icon, name: 'React' },
+		{ icon: TechIcons.redux_icon, name: 'Redux' },
+		{ icon: TechIcons.vite_icon, name: 'Vite' },
+		{ icon: TechIcons.next_icon, name: 'Next.js' },
+		{ icon: TechIcons.scss_icon, name: 'SCSS' },
+		{ icon: TechIcons.node_icon, name: 'Node.js' },
+		{ icon: TechIcons.express_icon, name: 'Express' },
+		{ icon: TechIcons.fastify_icon, name: 'Fastify' },
+		{ icon: TechIcons.nest_icon, name: 'Nest.js' },
+		{ icon: TechIcons.prisma_icon, name: 'Prisma' },
+		{ icon: TechIcons.supabase_icon, name: 'Supabase' },
+		{ icon: TechIcons.my_sql_icon, name: 'MySQL' },
+		{ icon: TechIcons.postgresql_icon, name: 'PostgreSQL' },
+		{ icon: TechIcons.docker_icon, name: 'Docker' },
+		{ icon: TechIcons.git_icon, name: 'Git' }
 	];
 
 	const animationText = {
@@ -56,7 +56,7 @@ const HomePage: FC = () => {
 		visible: (custom: number) => ({
 			x: 0,
 			opacity: 1,
-			transition: { delay: custom * 0.3, else: "easyOut", duration: 0.5 }
+			transition: { delay: custom * 0.3, else: 'easyOut', duration: 0.5 }
 		})
 	};
 
@@ -68,7 +68,7 @@ const HomePage: FC = () => {
 		visible: (custom: number) => ({
 			y: 0,
 			opacity: 1,
-			transition: { delay: custom * 0.1, else: "easyOut", duration: 0.4 }
+			transition: { delay: custom * 0.1, else: 'easyOut', duration: 0.4 }
 		})
 	};
 
@@ -83,12 +83,12 @@ const HomePage: FC = () => {
 			transition: {
 				y: {
 					delay: custom * 0.2,
-					ease: "easeOut",
+					ease: 'easeOut',
 					duration: 0.2
 				},
 				opacity: {
 					delay: custom * 0.3,
-					ease: "easeOut",
+					ease: 'easeOut',
 					duration: 1
 				}
 			}

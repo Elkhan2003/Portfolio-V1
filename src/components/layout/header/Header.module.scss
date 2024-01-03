@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 // ! header menu
 .header {
 	position: fixed;
@@ -63,7 +63,7 @@
 			cursor: pointer;
 
 			.logo__bg {
-				font-family: "Permanent Marker", cursive;
+				font-family: 'Permanent Marker', cursive;
 				font-size: 30px;
 				font-weight: 500;
 
@@ -629,21 +629,21 @@
 				width: 75%;
 			}
 
-			input[type="checkbox"] {
+			input[type='checkbox'] {
 				display: none;
 			}
 
-			input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+			input[type='checkbox']:checked ~ span:nth-of-type(1) {
 				transform-origin: bottom;
 				transform: rotatez(45deg) translate(8px, 0px);
 			}
 
-			input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+			input[type='checkbox']:checked ~ span:nth-of-type(2) {
 				transform-origin: top;
 				transform: rotatez(-45deg);
 			}
 
-			input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+			input[type='checkbox']:checked ~ span:nth-of-type(3) {
 				transform-origin: bottom;
 				width: 50%;
 				transform: translate(30px, -11px) rotatez(45deg);

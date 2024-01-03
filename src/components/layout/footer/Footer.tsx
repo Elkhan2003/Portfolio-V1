@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import scss from "./Footer.module.scss";
-import { GithubIcon, LinkedinIcon } from "@/components/svgs";
+import React, { FC } from 'react';
+import scss from './Footer.module.scss';
+import { GithubIcon, LinkedinIcon } from '@/components/svgs';
 
 const Footer: FC = () => {
 	return (

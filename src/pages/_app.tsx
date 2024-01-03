@@ -1,12 +1,12 @@
-import "@/pages/globals.scss";
-import "@/pages/theme.scss";
-import type { AppProps } from "next/app";
+import '@/pages/globals.scss';
+import '@/pages/theme.scss';
+import type { AppProps } from 'next/app';
 
-import { useRouter } from "next/router";
-import { IntlProvider } from "react-intl";
+import { useRouter } from 'next/router';
+import { IntlProvider } from 'react-intl';
 
-import en from "@/i18n/en.json";
-import ru from "@/i18n/ru.json";
+import en from '@/i18n/en.json';
+import ru from '@/i18n/ru.json';
 
 const messages: any = {
 	en,
@@ -14,12 +14,12 @@ const messages: any = {
 };
 
 function getDirection(locale: string): string {
-	return "ltr";
+	return 'ltr';
 }
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
-	const locale = router.locale || "en";
+	const locale = router.locale || 'en';
 
 	return (
 		<>

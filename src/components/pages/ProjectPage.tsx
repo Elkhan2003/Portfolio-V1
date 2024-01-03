@@ -1,21 +1,21 @@
-import React, { FC } from "react";
-import scss from "./Style.module.scss";
-import Image from "next/image";
-import eco_movie from "@/assets/projects/eco-movie.png";
-import wedevx_selenium from "@/assets/projects/wedevx-selenium.png";
-import ortodont_group from "@/assets/projects/ortodont-group.png";
-import amo_crm from "@/assets/projects/amo-crm.png";
-import telegram_sms_bot from "@/assets/projects/telegram-sms-bot.png";
-import devx_magazine from "@/assets/projects/devx-magazine.png";
-import devx_iksu from "@/assets/projects/devx-iksu.png";
-import my_diploma from "@/assets/projects/my-diploma.png";
-import mogo from "@/assets/projects/mogo.png";
-import devx_little from "@/assets/projects/devx-little.png";
-import ojjo from "@/assets/projects/ojjo.png";
-import css_animation from "@/assets/projects/css-animation.png";
-import todo_list from "@/assets/projects/todo-list.png";
-import { ArrowUpRightIcon, GithubIcon } from "@/components/svgs";
-import { FormattedMessage } from "react-intl";
+import React, { FC } from 'react';
+import scss from './Style.module.scss';
+import Image from 'next/image';
+import eco_movie from '@/assets/projects/eco-movie.png';
+import wedevx_selenium from '@/assets/projects/wedevx-selenium.png';
+import ortodont_group from '@/assets/projects/ortodont-group.png';
+import amo_crm from '@/assets/projects/amo-crm.png';
+import telegram_sms_bot from '@/assets/projects/telegram-sms-bot.png';
+import devx_magazine from '@/assets/projects/devx-magazine.png';
+import devx_iksu from '@/assets/projects/devx-iksu.png';
+import my_diploma from '@/assets/projects/my-diploma.png';
+import mogo from '@/assets/projects/mogo.png';
+import devx_little from '@/assets/projects/devx-little.png';
+import ojjo from '@/assets/projects/ojjo.png';
+import css_animation from '@/assets/projects/css-animation.png';
+import todo_list from '@/assets/projects/todo-list.png';
+import { ArrowUpRightIcon, GithubIcon } from '@/components/svgs';
+import { FormattedMessage } from 'react-intl';
 
 interface projectsTypes {
 	title: string;
@@ -29,75 +29,75 @@ interface projectsTypes {
 const ProjectPage: FC = () => {
 	const projects: projectsTypes[] = [
 		{
-			title: "Eco Movie 🐬",
+			title: 'Eco Movie 🐬',
 			description: <FormattedMessage id="page.project.text.eco_movie" />,
-			stack: ["NextJS", "TypeScript", "ReduxToolkit", "RestAPI"],
-			codeLink: "https://github.com/Elkhan2003/eco-movie",
-			demoLink: "https://ecomovie.life/",
+			stack: ['NextJS', 'TypeScript', 'ReduxToolkit', 'RestAPI'],
+			codeLink: 'https://github.com/Elkhan2003/eco-movie',
+			demoLink: 'https://ecomovie.life/',
 			image: eco_movie
 		},
 		{
-			title: "WeDevX Selenium 🐬",
+			title: 'WeDevX Selenium 🐬',
 			description: <FormattedMessage id="page.project.text.wedevx_selenium" />,
-			stack: ["NextJS", "TypeScript", "Material UI"],
-			codeLink: "https://github.com/Elkhan2003/Selenium",
-			demoLink: "https://demo-project.wedevx.co/",
+			stack: ['NextJS', 'TypeScript', 'Material UI'],
+			codeLink: 'https://github.com/Elkhan2003/Selenium',
+			demoLink: 'https://demo-project.wedevx.co/',
 			image: wedevx_selenium
 		},
 		{
-			title: "Ortodont Group 🪙",
+			title: 'Ortodont Group 🪙',
 			description: <FormattedMessage id="page.project.text.ortodont_group" />,
-			stack: ["NextJS", "TypeScript", "SCSS", "RestAPI"],
-			codeLink: "https://github.com/Elkhan2003/Next-Dentist",
-			demoLink: "https://next-dentist911.vercel.app/",
+			stack: ['NextJS', 'TypeScript', 'SCSS', 'RestAPI'],
+			codeLink: 'https://github.com/Elkhan2003/Next-Dentist',
+			demoLink: 'https://next-dentist911.vercel.app/',
 			image: ortodont_group
 		},
 		{
-			title: "AmoCRM 🐬",
+			title: 'AmoCRM 🐬',
 			description: <FormattedMessage id="page.project.text.amo_crm" />,
 			stack: [
-				"Fastify",
-				"TypeScript",
-				"Supabase",
-				"Prisma",
-				"AmoCRM",
-				"RestAPI"
+				'Fastify',
+				'TypeScript',
+				'Supabase',
+				'Prisma',
+				'AmoCRM',
+				'RestAPI'
 			],
-			codeLink: "https://github.com/Elkhan2003/AmoCRM",
-			demoLink: "https://rose-uninterested-crane.cyclic.cloud/",
+			codeLink: 'https://github.com/Elkhan2003/AmoCRM',
+			demoLink: 'https://rose-uninterested-crane.cyclic.cloud/',
 			image: amo_crm
 		},
 		{
-			title: "Telegram SMS bot 🐬",
+			title: 'Telegram SMS bot 🐬',
 			description: <FormattedMessage id="page.project.text.telegram_sms_bot" />,
-			stack: ["Express", "TypeScript", "TelegramBot", "RestAPI"],
-			codeLink: "https://github.com/Elkhan2003/telegram-sms-bot",
+			stack: ['Express', 'TypeScript', 'TelegramBot', 'RestAPI'],
+			codeLink: 'https://github.com/Elkhan2003/telegram-sms-bot',
 			demoLink:
-				"https://github.com/Elkhan2003/telegram-sms-bot/blob/main/README.md",
+				'https://github.com/Elkhan2003/telegram-sms-bot/blob/main/README.md',
 			image: telegram_sms_bot
 		},
 		{
-			title: "WeDevX Magazine 🐬",
+			title: 'WeDevX Magazine 🐬',
 			description: <FormattedMessage id="page.project.text.devx_magazine" />,
-			stack: ["React", "SCSS", "Firebase", "RestAPI"],
-			codeLink: "https://github.com/Elkhan2003/DevX-Magazine-Private",
-			demoLink: "https://devx911.netlify.app/",
+			stack: ['React', 'SCSS', 'Firebase', 'RestAPI'],
+			codeLink: 'https://github.com/Elkhan2003/DevX-Magazine-Private',
+			demoLink: 'https://devx911.netlify.app/',
 			image: devx_magazine
 		},
 		{
-			title: "Alpha version | DevX IKSU 🐬",
+			title: 'Alpha version | DevX IKSU 🐬',
 			description: <FormattedMessage id="page.project.text.devx_iksu" />,
-			stack: ["React", "TypeScript", "SCSS", "Firebase"],
-			codeLink: "https://github.com/DevX-Karakol-911/DevX-Karakol-beta",
-			demoLink: "https://devx-kg.netlify.app/",
+			stack: ['React', 'TypeScript', 'SCSS', 'Firebase'],
+			codeLink: 'https://github.com/DevX-Karakol-911/DevX-Karakol-beta',
+			demoLink: 'https://devx-kg.netlify.app/',
 			image: devx_iksu
 		},
 		{
-			title: "Diploma project 🪙",
+			title: 'Diploma project 🪙',
 			description: <FormattedMessage id="page.project.text.diploma_project" />,
-			stack: ["React", "SCSS", "Bootstrap"],
-			codeLink: "https://github.com/Elkhan2003/Elcho911-Diploma",
-			demoLink: "https://elcho911-diploma.netlify.app/",
+			stack: ['React', 'SCSS', 'Bootstrap'],
+			codeLink: 'https://github.com/Elkhan2003/Elcho911-Diploma',
+			demoLink: 'https://elcho911-diploma.netlify.app/',
 			image: my_diploma
 		},
 		// {
@@ -109,19 +109,19 @@ const ProjectPage: FC = () => {
 		// 	image: todo_list
 		// },
 		{
-			title: "2020 | Mogo 🤫",
+			title: '2020 | Mogo 🤫',
 			description: <FormattedMessage id="page.project.text.intern" />,
-			stack: ["HTML", "SCSS", "JavaScript"],
-			codeLink: "https://github.com/Elkhan2003/Mogo",
-			demoLink: "https://elkhan2003.github.io/Mogo/",
+			stack: ['HTML', 'SCSS', 'JavaScript'],
+			codeLink: 'https://github.com/Elkhan2003/Mogo',
+			demoLink: 'https://elkhan2003.github.io/Mogo/',
 			image: mogo
 		},
 		{
-			title: "2020 |  First little Site 🤫",
+			title: '2020 |  First little Site 🤫',
 			description: <FormattedMessage id="page.project.text.intern" />,
-			stack: ["HTML", "SCSS", "JavaScript"],
-			codeLink: "https://github.com/Elkhan2003/DevX",
-			demoLink: "https://elkhan2003.github.io/DevX/",
+			stack: ['HTML', 'SCSS', 'JavaScript'],
+			codeLink: 'https://github.com/Elkhan2003/DevX',
+			demoLink: 'https://elkhan2003.github.io/DevX/',
 			image: devx_little
 		},
 		// {
@@ -133,11 +133,11 @@ const ProjectPage: FC = () => {
 		// 	image: ojjo
 		// },
 		{
-			title: "2020 |  CSS Animation 🤫",
+			title: '2020 |  CSS Animation 🤫',
 			description: <FormattedMessage id="page.project.text.intern" />,
-			stack: ["HTML", "CSS"],
-			codeLink: "https://github.com/Elkhan2003/css-animation",
-			demoLink: "https://elkhan2003.github.io/css-animation/",
+			stack: ['HTML', 'CSS'],
+			codeLink: 'https://github.com/Elkhan2003/css-animation',
+			demoLink: 'https://elkhan2003.github.io/css-animation/',
 			image: css_animation
 		}
 	];
@@ -162,7 +162,7 @@ const ProjectPage: FC = () => {
 						{projects.map((project, index) => (
 							<div
 								className={`${scss.card} ${
-									index % 2 !== 0 ? scss.row__reverse : ""
+									index % 2 !== 0 ? scss.row__reverse : ''
 								}`}
 								key={index + 1}
 							>
@@ -200,7 +200,7 @@ const ProjectPage: FC = () => {
 											quality={25}
 											loading="eager"
 											src={project.image}
-											alt={"project"}
+											alt={'project'}
 										/>
 									</a>
 								</div>

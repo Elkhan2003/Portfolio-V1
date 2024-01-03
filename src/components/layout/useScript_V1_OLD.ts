@@ -1,16 +1,16 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const useScript_V1 = (url: string): void => {
 	useEffect(() => {
-		const canvas = document.getElementById("canvas") as HTMLCanvasElement;
-		const ctx = canvas.getContext("2d")!;
+		const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+		const ctx = canvas.getContext('2d')!;
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
 		let spots: Particle[] = [];
 		let hue = 0;
 		const mouse = { x: undefined, y: undefined };
 
-		canvas.addEventListener("mousemove", function (event: any) {
+		canvas.addEventListener('mousemove', function (event: any) {
 			mouse.x = event.x;
 			mouse.y = event.y;
 			for (let i = 0; i < 3; i++) {
@@ -82,13 +82,13 @@ const useScript_V1 = (url: string): void => {
 			requestAnimationFrame(animate);
 		}
 
-		window.addEventListener("resize", function () {
+		window.addEventListener('resize', function () {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
 			spots = [];
 		});
 
-		window.addEventListener("mouseout", function () {
+		window.addEventListener('mouseout', function () {
 			mouse.x = undefined;
 			mouse.y = undefined;
 		});

@@ -1,11 +1,11 @@
-import React, { FC } from "react";
-import scss from "@/components/pages/Style.module.scss";
-import { TypingTitle, TypingText } from "@/components/typing-text/Typing";
-import { FormattedMessage } from "react-intl";
-import { GithubIcon, LinkedinIcon } from "@/components/svgs";
-import Image, { StaticImageData } from "next/image";
-import * as TechIcons from "@/assets/tech-icons";
-import { motion } from "framer-motion";
+import React, { FC } from 'react';
+import scss from '@/components/pages/Style.module.scss';
+import { TypingTitle, TypingText } from '@/components/typing-text/Typing';
+import { FormattedMessage } from 'react-intl';
+import { GithubIcon, LinkedinIcon } from '@/components/svgs';
+import Image, { StaticImageData } from 'next/image';
+import * as TechIcons from '@/assets/tech-icons';
+import { motion } from 'framer-motion';
 
 const HomePage: FC = () => {
 	const tech_icons: StaticImageData[] = [
@@ -28,7 +28,7 @@ const HomePage: FC = () => {
 		visible: (custom: number) => ({
 			x: 0,
 			opacity: 1,
-			transition: { delay: custom * 0.4, else: "easyOut", duration: 0.5 }
+			transition: { delay: custom * 0.4, else: 'easyOut', duration: 0.5 }
 		})
 	};
 
@@ -40,7 +40,7 @@ const HomePage: FC = () => {
 		visible: (custom: number) => ({
 			y: 0,
 			opacity: 1,
-			transition: { delay: custom * 0.1, else: "easyOut", duration: 0.4 }
+			transition: { delay: custom * 0.1, else: 'easyOut', duration: 0.4 }
 		})
 	};
 
@@ -55,12 +55,12 @@ const HomePage: FC = () => {
 			transition: {
 				y: {
 					delay: custom * 0.2,
-					ease: "easeOut",
+					ease: 'easeOut',
 					duration: 0.2
 				},
 				opacity: {
 					delay: custom * 0.3,
-					ease: "easeOut",
+					ease: 'easeOut',
 					duration: 1
 				}
 			}
@@ -162,7 +162,7 @@ const HomePage: FC = () => {
 												loading="eager"
 												className={scss.icon}
 												src={item}
-												alt={"icon"}
+												alt={'icon'}
 											/>
 										</motion.div>
 									))}

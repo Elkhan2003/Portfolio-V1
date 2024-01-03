@@ -1,16 +1,16 @@
-import React, { FC, useEffect, useState } from "react";
-import scss from "./Style.module.scss";
-import axios from "axios";
-import { useForm } from "react-hook-form";
-import { FormattedMessage, useIntl } from "react-intl";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Tilt from "react-parallax-tilt";
+import React, { FC, useEffect, useState } from 'react';
+import scss from './Style.module.scss';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Tilt from 'react-parallax-tilt';
 
-import { Montserrat } from "next/font/google";
-import ReactPlayer from "react-player";
+import { Montserrat } from 'next/font/google';
+import ReactPlayer from 'react-player';
 
-const font = Montserrat({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ['latin'] });
 
 interface FormData {
 	name: string;
@@ -35,11 +35,11 @@ const ContactPage: FC = () => {
 		formState: { errors },
 		reset
 	} = useForm<FormData>({
-		mode: "onChange"
+		mode: 'onChange'
 	});
 
-	const TOKEN = "6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww";
-	const CHAT_ID = "-1001985016010";
+	const TOKEN = '6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww';
+	const CHAT_ID = '-1001985016010';
 	const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 	const messageModel = (data: FormData) => {
@@ -57,7 +57,7 @@ const ContactPage: FC = () => {
 		try {
 			await axios.post(API_URL, {
 				chat_id: CHAT_ID,
-				parse_mode: "html",
+				parse_mode: 'html',
 				text: messageModel(data)
 			});
 
@@ -72,15 +72,15 @@ const ContactPage: FC = () => {
 	};
 
 	const notify = () => {
-		toast.success("Ваша форма успешно отправлена!", {
-			position: "top-right",
+		toast.success('Ваша форма успешно отправлена!', {
+			position: 'top-right',
 			autoClose: 3000,
 			hideProgressBar: false,
 			closeOnClick: true,
 			pauseOnHover: true,
 			draggable: true,
 			progress: undefined,
-			theme: "dark"
+			theme: 'dark'
 		});
 	};
 
@@ -134,9 +134,9 @@ const ContactPage: FC = () => {
 											className={scss.form__field}
 											type="text"
 											placeholder={intl.formatMessage({
-												id: "page.contact.input.name"
+												id: 'page.contact.input.name'
 											})}
-											{...register("name", { required: true, minLength: 2 })}
+											{...register('name', { required: true, minLength: 2 })}
 										/>
 										<label htmlFor="name" className={scss.form__label}>
 											<FormattedMessage id="page.contact.input.name" />
@@ -153,9 +153,9 @@ const ContactPage: FC = () => {
 											className={scss.form__field}
 											type="text"
 											placeholder={intl.formatMessage({
-												id: "page.contact.input.email"
+												id: 'page.contact.input.email'
 											})}
-											{...register("email", {
+											{...register('email', {
 												required: true,
 												pattern: /^\S+@\S+$/i
 											})}
@@ -175,9 +175,9 @@ const ContactPage: FC = () => {
 											className={scss.form__field}
 											type="text"
 											placeholder={intl.formatMessage({
-												id: "page.contact.input.subject"
+												id: 'page.contact.input.subject'
 											})}
-											{...register("subject", { required: true, minLength: 2 })}
+											{...register('subject', { required: true, minLength: 2 })}
 										/>
 										<label htmlFor="subject" className={scss.form__label}>
 											<FormattedMessage id="page.contact.input.subject" />
@@ -193,9 +193,9 @@ const ContactPage: FC = () => {
 										<textarea
 											className={`${font.className} ${scss.form__field}`}
 											placeholder={intl.formatMessage({
-												id: "page.contact.input.message"
+												id: 'page.contact.input.message'
 											})}
-											{...register("message")}
+											{...register('message')}
 										/>
 										<label htmlFor="subject" className={scss.form__label}>
 											<FormattedMessage id="page.contact.input.message" />

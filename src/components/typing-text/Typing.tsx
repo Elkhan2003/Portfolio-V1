@@ -1,17 +1,17 @@
-import React, { FC } from "react";
-import { useIntl } from "react-intl";
-import { Typewriter } from "react-simple-typewriter";
+import React, { FC } from 'react';
+import { useIntl } from 'react-intl';
+import { Typewriter } from 'react-simple-typewriter';
 
 const TypingTitle: FC = () => {
 	const intl = useIntl();
 
 	const texts = [
-		intl.formatMessage({ id: "page.home.title_1" }),
-		intl.formatMessage({ id: "page.home.title_2" }),
-		intl.formatMessage({ id: "page.home.title_3" }),
-		intl.formatMessage({ id: "page.home.title_4" }),
-		intl.formatMessage({ id: "page.home.title_5" }),
-		intl.formatMessage({ id: "page.home.title_6" })
+		intl.formatMessage({ id: 'page.home.title_1' }),
+		intl.formatMessage({ id: 'page.home.title_2' }),
+		intl.formatMessage({ id: 'page.home.title_3' }),
+		intl.formatMessage({ id: 'page.home.title_4' }),
+		intl.formatMessage({ id: 'page.home.title_5' }),
+		intl.formatMessage({ id: 'page.home.title_6' })
 	];
 
 	return (
@@ -30,7 +30,7 @@ const TypingTitle: FC = () => {
 const TypingText: FC = () => {
 	const intl = useIntl();
 
-	const texts = [intl.formatMessage({ id: "page.home.my__self" })];
+	const texts = [intl.formatMessage({ id: 'page.home.my__self' })];
 
 	return (
 		<Typewriter

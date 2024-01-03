@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import scss from "./PreLoader.module.scss";
+import React, { FC } from 'react';
+import scss from './PreLoader.module.scss';
 // import { Dna } from "react-loader-spinner";
 
 interface PreloaderType {

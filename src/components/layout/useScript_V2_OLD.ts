@@ -1,5 +1,5 @@
-import gsap from "gsap";
-import { useEffect } from "react";
+import gsap from 'gsap';
+import { useEffect } from 'react';
 
 interface Point {
 	x: number;
@@ -27,8 +27,8 @@ interface Coordinates {
 const useScript_V2 = (url: string): void => {
 	useEffect(() => {
 		(function () {
-			const canvas = document.getElementById("canvas") as HTMLCanvasElement;
-			const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+			const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+			const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 			let width: number = window.innerWidth;
 			let height: number = window.innerHeight;
 			const target = { x: width / 2, y: height / 2 };
@@ -95,22 +95,22 @@ const useScript_V2 = (url: string): void => {
 				const circle: Circle = {
 					pos: point,
 					radius: 2 + Math.random() * 2,
-					color: "rgba(255,255,255,0.3)",
+					color: 'rgba(255,255,255,0.3)',
 					active: 0,
 					draw: function () {
 						ctx.beginPath();
 						ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
-						ctx.fillStyle = "rgba(255,255,255," + this.active + ")";
+						ctx.fillStyle = 'rgba(255,255,255,' + this.active + ')';
 						ctx.fill();
 					}
 				};
 				point.circle = circle;
 			});
 
-			if (!("ontouchstart" in window)) {
-				window.addEventListener("mousemove", mouseMove);
+			if (!('ontouchstart' in window)) {
+				window.addEventListener('mousemove', mouseMove);
 			}
-			window.addEventListener("resize", resize);
+			window.addEventListener('resize', resize);
 
 			function mouseMove(e: MouseEvent) {
 				mouseX = e.clientX;
@@ -168,7 +168,7 @@ const useScript_V2 = (url: string): void => {
 					duration: 1 + 1 * Math.random(),
 					x: p.originX - 50 + Math.random() * 100,
 					y: p.originY - 50 + Math.random() * 100,
-					ease: "power2.inOut",
+					ease: 'power2.inOut',
 					onComplete: () => {
 						shiftPoint(p);
 					}
@@ -181,7 +181,7 @@ const useScript_V2 = (url: string): void => {
 					ctx.beginPath();
 					ctx.moveTo(p.x, p.y);
 					ctx.lineTo(closestPoint.x, closestPoint.y);
-					ctx.strokeStyle = "rgba(255,255,255," + p.active + ")";
+					ctx.strokeStyle = 'rgba(255,255,255,' + p.active + ')';
 					ctx.stroke();
 				}
 			}

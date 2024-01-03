@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import scss from "@/components/pages/Style.module.scss";
-import Image from "next/image";
-import about_pic from "@/assets/about-pic.png";
-import spiner_pic from "@/assets/spiner-pic.png";
-import { FormattedMessage } from "react-intl";
+import React, { FC } from 'react';
+import scss from '@/components/pages/Style.module.scss';
+import Image from 'next/image';
+import about_pic from '@/assets/about-pic.png';
+import spiner_pic from '@/assets/spiner-pic.png';
+import { FormattedMessage } from 'react-intl';
 
 const AboutPage: FC = () => {
 	return (
@@ -18,7 +18,7 @@ const AboutPage: FC = () => {
 								loading="eager"
 								className={`${scss.img}`}
 								src={about_pic}
-								alt={"labtop"}
+								alt={'labtop'}
 							/>
 							<span>
 								<Image
@@ -27,7 +27,7 @@ const AboutPage: FC = () => {
 									loading="eager"
 									className={`${scss.icon}`}
 									src={spiner_pic}
-									alt={"icon"}
+									alt={'icon'}
 								/>
 							</span>
 						</div>

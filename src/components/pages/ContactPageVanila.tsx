@@ -1,13 +1,13 @@
-import React, { FC, useState } from "react";
-import scss from "./Style.module.scss";
-import axios from "axios";
-import { FormattedMessage, useIntl } from "react-intl";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { FC, useState } from 'react';
+import scss from './Style.module.scss';
+import axios from 'axios';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import { Montserrat } from "next/font/google";
+import { Montserrat } from 'next/font/google';
 
-const font = Montserrat({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ['latin'] });
 
 interface FormData {
 	name: string;
@@ -18,14 +18,14 @@ interface FormData {
 
 const ContactPage: FC = () => {
 	const [formData, setFormData] = useState<FormData>({
-		name: "",
-		email: "",
-		subject: "",
-		message: ""
+		name: '',
+		email: '',
+		subject: '',
+		message: ''
 	});
 
-	const TOKEN = "6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww";
-	const CHAT_ID = "-1001985016010";
+	const TOKEN = '6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww';
+	const CHAT_ID = '-1001985016010';
 	const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 	const messageModel = () => {
@@ -44,15 +44,15 @@ const ContactPage: FC = () => {
 	};
 
 	const notify = () => {
-		toast.success("Ваша форма успешно отправлена!", {
-			position: "top-right",
+		toast.success('Ваша форма успешно отправлена!', {
+			position: 'top-right',
 			autoClose: 3000,
 			hideProgressBar: false,
 			closeOnClick: true,
 			pauseOnHover: true,
 			draggable: true,
 			progress: undefined,
-			theme: "dark"
+			theme: 'dark'
 		});
 	};
 
@@ -62,17 +62,17 @@ const ContactPage: FC = () => {
 		try {
 			await axios.post(API_URL, {
 				chat_id: CHAT_ID,
-				parse_mode: "html",
+				parse_mode: 'html',
 				text: messageModel()
 			});
 
 			notify();
 
 			setFormData({
-				name: "",
-				email: "",
-				subject: "",
-				message: ""
+				name: '',
+				email: '',
+				subject: '',
+				message: ''
 			});
 		} catch (err) {
 			console.log(err);
@@ -142,7 +142,7 @@ const ContactPage: FC = () => {
 											name="message"
 											id="message"
 											placeholder={intl.formatMessage({
-												id: "page.contact.input.message"
+												id: 'page.contact.input.message'
 											})}
 											value={formData.message}
 											onChange={handleChange}
