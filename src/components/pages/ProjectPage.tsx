@@ -91,15 +91,15 @@ const ProjectPage: FC = () => {
 			codeLink: 'https://github.com/DevX-Karakol-911/DevX-Karakol-beta',
 			demoLink: 'https://devx-kg.netlify.app/',
 			image: devx_iksu
-		},
-		{
-			title: 'Diploma project 🪙',
-			description: <FormattedMessage id="page.project.text.diploma_project" />,
-			stack: ['React', 'SCSS', 'Bootstrap'],
-			codeLink: 'https://github.com/Elkhan2003/Elcho911-Diploma',
-			demoLink: 'https://elcho911-diploma.netlify.app/',
-			image: my_diploma
 		}
+		// {
+		// 	title: 'Diploma project 🪙',
+		// 	description: <FormattedMessage id="page.project.text.diploma_project" />,
+		// 	stack: ['React', 'SCSS', 'Bootstrap'],
+		// 	codeLink: 'https://github.com/Elkhan2003/Elcho911-Diploma',
+		// 	demoLink: 'https://elcho911-diploma.netlify.app/',
+		// 	image: my_diploma
+		// }
 		// {
 		// 	title: "ToDo List 🪙",
 		// 	description: <FormattedMessage id="page.project.text.todo_list" />,
