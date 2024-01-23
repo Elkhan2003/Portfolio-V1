@@ -7,7 +7,8 @@ import { useIntl } from 'react-intl';
 import useScript_V2 from '@/components/layout/useScript_V2';
 
 import { Montserrat } from 'next/font/google';
-import Preloader from '../preloader/Preloader';
+// import Preloader from '../preloader/Preloader';
+import PreLoaderDevX from '@/components/preloader/PreLoaderDevX';
 
 const font = Montserrat({ subsets: ['latin'] });
 
@@ -86,7 +87,8 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 			</Head>
 			<div>
 				{loading ? (
-					<Preloader />
+					// <Preloader />
+					<PreLoaderDevX />
 				) : (
 					<>
 						{isCursor && <canvas className={scss.canvas} id="canvas" />}
