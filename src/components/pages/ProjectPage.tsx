@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import scss from './Style.module.scss';
 import Image from 'next/image';
+import crud_nest from '@/assets/projects/crud-nest.png';
 import eco_movie from '@/assets/projects/eco-movie.png';
 import wedevx_selenium from '@/assets/projects/wedevx-selenium.png';
 import ortodont_group from '@/assets/projects/ortodont-group.png';
@@ -28,6 +29,22 @@ interface projectsTypes {
 
 const ProjectPage: FC = () => {
 	const projects: projectsTypes[] = [
+		{
+			title: 'CrudNest ❤️‍🔥',
+			description: 'Soon...',
+			stack: [
+				'NextJS',
+				'TypeScript',
+				'ReduxToolkit',
+				'Express',
+				'Prisma-ORM',
+				'Supabase',
+				'RestAPI'
+			],
+			codeLink: 'https://github.com/Elkhan2003',
+			demoLink: 'https://github.com/Elkhan2003',
+			image: crud_nest
+		},
 		{
 			title: 'Eco Movie 🐬',
 			description: <FormattedMessage id="page.project.text.eco_movie" />,
