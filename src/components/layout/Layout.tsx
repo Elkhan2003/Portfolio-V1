@@ -48,7 +48,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 1700);
+		}, 2000);
 	}, []);
 
 	useEffect(() => {
