@@ -28,6 +28,7 @@
 	"!--!--!--PROJECT--!--!--!": "!--!--!--PROJECT--!--!--!",
 	"page.project.title_1": "Projects",
 	"page.project.title_2": "Each project is a unique piece of development 🧩",
+	"page.project.text.elchocrud": "The ElchoCrud project was created specifically for those people who are just starting to immerse themselves in the IT world, especially in Frontend and Mobile Development. This project is a full-fledged backend with flexible capabilities for creating tables and a complete database. Users can create their own endpoints and data tables.",
 	"page.project.text.eco_movie": "EcoMovie - a unique website providing fascinating information about movies and TV shows. Here you can discover all the necessary details about your favorite films, actors, directors, ratings, and much more.",
 	"page.project.text.wedevx_selenium": "WeDevX Selenium was specifically created for SDET students to help them refine their skills in working with Selenium.",
 	"page.project.text.ortodont_group": "The Ortodont Group website is the website of the Ortodont Group dental clinic. On the website, you can find information about the clinic, the services it provides, and also make an appointment.",

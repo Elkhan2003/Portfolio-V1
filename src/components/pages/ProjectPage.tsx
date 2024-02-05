@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import scss from './Style.module.scss';
 import Image from 'next/image';
-import crud_nest from '@/assets/projects/crud-nest.png';
+import elchocrud from '@/assets/projects/elchocrud.png';
 import eco_movie from '@/assets/projects/eco-movie.png';
 import wedevx_selenium from '@/assets/projects/wedevx-selenium.png';
 import ortodont_group from '@/assets/projects/ortodont-group.png';
@@ -30,8 +30,8 @@ interface projectsTypes {
 const ProjectPage: FC = () => {
 	const projects: projectsTypes[] = [
 		{
-			title: 'CrudNest ❤️‍🔥',
-			description: 'Soon...',
+			title: 'Elcho Crud ❤️‍🔥',
+			description: <FormattedMessage id="page.project.text.elchocrud" />,
 			stack: [
 				'NextJS',
 				'TypeScript',
@@ -41,9 +41,9 @@ const ProjectPage: FC = () => {
 				'Supabase',
 				'RestAPI'
 			],
-			codeLink: 'https://github.com/Elkhan2003',
-			demoLink: 'https://github.com/Elkhan2003',
-			image: crud_nest
+			codeLink: 'https://elchocrud.pro/',
+			demoLink: 'https://elchocrud.pro/',
+			image: elchocrud
 		},
 		{
 			title: 'Eco Movie 🐬',
