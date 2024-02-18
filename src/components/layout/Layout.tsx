@@ -7,7 +7,6 @@ import { useIntl } from 'react-intl';
 import useScript_V2 from '@/components/layout/useScript_V2';
 
 import { Montserrat } from 'next/font/google';
-// import Preloader from '../preloader/Preloader';
 import PreLoaderDevX from '@/components/preloader/PreLoaderDevX';
 
 const font = Montserrat({ subsets: ['latin'] });
@@ -56,12 +55,6 @@ const Layout: FC<LayoutProps> = ({ children, dir, url }) => {
 			setIsCursor(false);
 		}
 	}, []);
-
-	// useEffect(() => {
-	// 	window.onload = () => {
-	// 		setLoading(false);
-	// 	};
-	// }, []);
 
 	const intl: any = useIntl();
 	const title: any = intl.formatMessage({ id: 'page.head.home.title' });
